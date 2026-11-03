@@ -1,0 +1,76 @@
+[gd_scene format=3 uid="uid://cevgyhdqrh58i"]
+
+[ext_resource type="Script" uid="uid://qlsl4fder4j0" path="res://Scripts/Cards/upgrade_spawner.gd" id="1_awgwm"]
+[ext_resource type="PackedScene" uid="uid://dkupjvu28eg04" path="res://_Scene/Upgrades/upgrade_back_n.tscn" id="2_vj45a"]
+[ext_resource type="Sky" uid="uid://dh771nio3jfo8" path="res://Externals/Binbun/SkiesFull/assets/BinbunSky/skies/stylized/stylized_warm_sky_01.tres" id="3_qylmw"]
+[ext_resource type="PackedScene" uid="uid://crqp3pcxlr4yx" path="res://_Scene/Map/map_field.tscn" id="4_yfkum"]
+[ext_resource type="PackedScene" uid="uid://jwprsyprrpye" path="res://_Scene/Prefabs/Entities/player.tscn" id="5_gteq8"]
+[ext_resource type="PackedScene" uid="uid://c3f5k6746lv43" path="res://_Scene/Entities/npc_1.tscn" id="6_npc_sample"]
+[ext_resource type="PackedScene" uid="uid://dheey1jkj5xue" path="res://_Scene/Entities/npc_2.tscn" id="7_33waf"]
+[ext_resource type="PackedScene" uid="uid://ga131rxigec3" path="res://_Scene/Entities/npc_3.tscn" id="8_1qsn0"]
+[ext_resource type="Resource" uid="uid://divvvaxdeaksm" path="res://_Scene/Entities/npc_3.dialogue" id="9_s82ea"]
+[ext_resource type="PackedScene" uid="uid://bwlaeivngkike" path="res://_Scene/Entities/npc_4.tscn" id="10_r4d6t"]
+[ext_resource type="PackedScene" uid="uid://cdr3tbeargqpr" path="res://_Scene/Entities/npc_5.tscn" id="11_dfjos"]
+[ext_resource type="PackedScene" uid="uid://butlwiy10myxf" path="res://_Scene/Entities/npc_6.tscn" id="12_hftub"]
+[ext_resource type="PackedScene" uid="uid://b42m51xrnhkbm" path="res://_Scene/Entities/npc_7.tscn" id="13_sirnc"]
+[ext_resource type="PackedScene" uid="uid://hkbjxx1fnhrv" path="res://_Scene/Entities/npc_8.tscn" id="14_sirnc"]
+[ext_resource type="PackedScene" uid="uid://c0hurr44m4p3u" path="res://_Scene/Entities/npc_9.tscn" id="15_hh4bs"]
+[ext_resource type="PackedScene" uid="uid://c8jh1jqugwb8t" path="res://_Scene/Entities/npc_10.tscn" id="16_wrsqx"]
+
+[sub_resource type="Environment" id="Environment_mxsx2"]
+background_mode = 2
+sky = ExtResource("3_qylmw")
+ambient_light_source = 3
+adjustment_enabled = true
+adjustment_brightness = 1.2
+adjustment_saturation = 1.3
+
+[node name="Test" type="Node3D" unique_id=733729080]
+
+[node name="Map_Field" parent="." unique_id=1954453889 instance=ExtResource("4_yfkum")]
+
+[node name="UpgradeSpawner" type="Node" parent="." unique_id=166387250]
+script = ExtResource("1_awgwm")
+card_scene = ExtResource("2_vj45a")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=159677928]
+environment = SubResource("Environment_mxsx2")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="." unique_id=1486187999]
+transform = Transform3D(0.70710677, -0.49999997, 0.49999997, 0, 0.7071068, 0.7071068, -0.7071068, -0.5, 0.5, 0, 5.6572695, 0)
+
+[node name="Player" parent="." unique_id=730588806 instance=ExtResource("5_gteq8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15619452, 0.40863693, 1.5552801)
+
+[node name="Entities" type="Node3D" parent="." unique_id=1193040696]
+
+[node name="NPC_1" parent="Entities" unique_id=1954804558 instance=ExtResource("6_npc_sample")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.133187, 0.35072088, -0.50726724)
+
+[node name="NPC_2" parent="Entities" unique_id=394437078 instance=ExtResource("7_33waf")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.781122, 0.09510791, 7.6714892)
+
+[node name="NPC_3" parent="Entities" unique_id=546150186 instance=ExtResource("8_1qsn0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.032529, 0.0951069, 11.147823)
+dialogue = ExtResource("9_s82ea")
+
+[node name="NPC_4" parent="Entities" unique_id=202646475 instance=ExtResource("10_r4d6t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.27843, 0.09510887, -20.435894)
+
+[node name="NPC_5" parent="Entities" unique_id=1318968825 instance=ExtResource("11_dfjos")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.25247446, 0.5434708, 19.903233)
+
+[node name="NPC_6" parent="Entities" unique_id=678146401 instance=ExtResource("12_hftub")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -8, 0, -9)
+
+[node name="NPC_7" parent="Entities" unique_id=15424376 instance=ExtResource("13_sirnc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13, 0, -17)
+
+[node name="NPC_8" parent="Entities" unique_id=525966730 instance=ExtResource("14_sirnc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -22.87972, 0.15365648, 1.9263847)
+
+[node name="NPC_9" parent="Entities" unique_id=183307366 instance=ExtResource("15_hh4bs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.66858, 0.09522992, -12.078857)
+
+[node name="NPC_10" parent="Entities" unique_id=1546544562 instance=ExtResource("16_wrsqx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.375732, 0.09510791, -9.592529)

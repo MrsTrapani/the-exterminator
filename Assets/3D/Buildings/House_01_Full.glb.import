@@ -1,0 +1,355 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://dbad4ma3hak46"
+path="res://.godot/imported/House_01_Full.glb-161387897015283a4f78310add0122bf.scn"
+
+[deps]
+
+source_file="res://Assets/3D/Buildings/House_01_Full.glb"
+dest_files=["res://.godot/imported/House_01_Full.glb-161387897015283a4f78310add0122bf.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/root_script=null
+mesh_library/use_node_names_as_mesh_names=false
+array_mesh/deduplicate_surfaces=true
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+nodes/use_name_suffixes=true
+nodes/use_node_type_suffixes=true
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+materials/extract=0
+materials/extract_format=0
+materials/extract_path=""
+_subresources={
+"materials": {
+"HOUSE_01_MATERIAL": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Material/M_ModularHouses.tres",
+"use_external/path": "res://Material/M_ModularHouses.tres"
+}
+},
+"nodes": {
+"PATH:DOOR_05_2": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:FOUNDATION_02_26": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:FOUNDATION_02_27": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:FOUNDATION_02_28": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:FOUNDATION_02_29": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:FOUNDATION_02_30": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:FOUNDATION_02_31": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:FOUNDATION_03_2": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:FOUNDATION_03_3": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:FOUNDATION_03_4": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:FOUNDATION_03_5": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_003": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_004": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_005": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_006": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_007": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_008": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_009": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_010": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_011": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_012": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_013": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_014": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_015": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_016": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_017": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_018": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_019": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_020": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_021": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_022": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_1_023": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1_003": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1_004": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1_005": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1_006": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1_007": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1_008": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1_009": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1_010": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_base_small_1_011": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_triangle_window_grid_10": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_triangle_window_grid_9": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_triangles_up_wood_1": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_triangles_up_wood_1_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_trinagle_left_wood_2": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_trinagle_left_wood_3": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_trinagle_left_wood_4": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_trinagle_left_wood_5": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_trinagle_right_wood_3": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_trinagle_right_wood_5": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_trinagle_right_wood_6": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_trinagle_right_wood_7": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_up_quad_2": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_up_quad_3": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_up_quad_4": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_up_quad_5": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_up_quad_6": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:ROOF_up_quad_7": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:STAIRS_01_6": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:WALL_01_1": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:WALL_01_1_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:WALL_01_1_002": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:WALL_01_1_003": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:WALL_02_2": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:WINDOW_03_1": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:WINDOW_03_1_001": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:WINDOW_07_3": {
+"generate/physics": true,
+"physics/shape_type": 1
+},
+"PATH:WINDOW_07_4": {
+"generate/physics": true,
+"physics/shape_type": 1
+}
+}
+}
+gltf/naming_version=2
+gltf/embedded_image_handling=3
+gltf/texture_map_mode=1

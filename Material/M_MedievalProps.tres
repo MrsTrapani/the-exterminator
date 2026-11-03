@@ -1,0 +1,34 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bceeb7re5njpm"]
+
+[ext_resource type="Material" uid="uid://2dmtjv7f3k4p" path="res://Material/M_Outline.tres" id="1_4qbhn"]
+[ext_resource type="Shader" uid="uid://v0g5w5d1pnyo" path="res://Scripts/Shader/Stylized_Decor_DoubleSided.gdshader" id="1_wprl7"]
+[ext_resource type="Texture2D" uid="uid://cardscljgiqw0" path="res://Externals/Binbun/UltimateToon/assets/BinbunMaterials/src/texture/patterns/shape/circle.tres" id="2_0mvvs"]
+[ext_resource type="Texture2D" uid="uid://db6efac34ujif" path="res://Assets/3D/Props/Texture/MedievalProps.png" id="2_30yo0"]
+
+[resource]
+render_priority = 0
+next_pass = ExtResource("1_4qbhn")
+shader = ExtResource("1_wprl7")
+shader_parameter/albedo_color = Color(0.74455225, 0.7022369, 0.5586773, 1)
+shader_parameter/albedo_texture = ExtResource("2_30yo0")
+shader_parameter/albedo_affect = 0.0
+shader_parameter/use_stepped = true
+shader_parameter/steps = 3.0
+shader_parameter/step_smoothness = 0.15
+shader_parameter/shadow_tint = Color(0, 0.493, 0.51, 1)
+shader_parameter/shadow_tint_amount = 0.4
+shader_parameter/specular = 0.0
+shader_parameter/normal_strength = 0.0
+shader_parameter/use_rim = true
+shader_parameter/rim_color = Color(0.580392, 1, 1, 1)
+shader_parameter/rim_amount = 1.5
+shader_parameter/rim_smoothness = 0.2
+shader_parameter/rim_mask_shadow = 1.0
+shader_parameter/rim_blend = 1.0
+shader_parameter/use_pattern = false
+shader_parameter/pattern_texture = ExtResource("2_0mvvs")
+shader_parameter/pattern_uv_mode = 2
+shader_parameter/pattern_tiling = 32.0
+shader_parameter/pattern_amount = 0.0
+shader_parameter/pattern_smoothness = 0.0
+shader_parameter/pattern_blend = 0.35

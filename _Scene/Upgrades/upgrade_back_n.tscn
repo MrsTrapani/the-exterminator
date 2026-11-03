@@ -1,0 +1,194 @@
+[gd_scene format=3 uid="uid://dkupjvu28eg04"]
+
+[ext_resource type="Material" uid="uid://b81u0gn8mhjxg" path="res://Externals/Binbun/BinbunVFX/card_effects/materials/foil/foil_parallax_01.tres" id="1_8crt1"]
+[ext_resource type="Script" uid="uid://8rbr835ls5dn" path="res://Scripts/Cards/upgrade_back_n.gd" id="1_uug04"]
+[ext_resource type="Texture2D" uid="uid://drowspjgkjka1" path="res://Externals/Binbun/BinbunVFX/card_effects/textures/card_layer_01.png" id="2_sbite"]
+[ext_resource type="PackedScene" uid="uid://tmilhm8ra4wi" path="res://_Scene/UI/Component/upgrade_template.tscn" id="3_sbite"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mxsx2"]
+size = Vector2(0.48, 0.64)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_mxsx2"]
+viewport_path = NodePath("ParallaxCard_Foil_01/SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_0rvyt"]
+viewport_path = NodePath("ParallaxCard_Foil_01/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_uug04"]
+resource_local_to_scene = true
+transparency = 1
+albedo_texture = SubResource("ViewportTexture_mxsx2")
+emission_enabled = true
+emission_energy_multiplier = 0.5
+emission_texture = SubResource("ViewportTexture_0rvyt")
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mxsx2"]
+size = Vector3(0.49890137, 0.6538086, 0.49401855)
+
+[sub_resource type="Animation" id="Animation_sbite"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ParallaxCard_Foil_01:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 1.5707964, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ParallaxCard_Foil_01:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(0, 0, 0)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("ParallaxCard_Foil_01:scale")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector3(1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3iqeo"]
+resource_name = "despawn"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ParallaxCard_Foil_01:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.05)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ParallaxCard_Foil_01:scale")
+tracks/1/interp = 2
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(1, 1, 1), Vector3(1.1, 1.1, 1.1), Vector3(0.01, 0.01, 0.01)]
+}
+
+[sub_resource type="Animation" id="Animation_uug04"]
+resource_name = "flip"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ParallaxCard_Foil_01:rotation")
+tracks/0/interp = 2
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 3.1415927, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_fg68k"]
+resource_name = "selected"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ParallaxCard_Foil_01:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, -3.1415927, 0), Vector3(0, 0, 0), Vector3(0, -3.1415927, 0), Vector3(0, 0, 0), Vector3(0, -3.1415927, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("ParallaxCard_Foil_01:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.4, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0), Vector3(0, 0, -0.05), Vector3(0, 0, 0.05)]
+}
+
+[sub_resource type="Animation" id="Animation_xrdwo"]
+resource_name = "zoom"
+length = 0.1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("ParallaxCard_Foil_01:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(0, 0, 0), Vector3(0, 0, 0.05)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xrdwo"]
+_data = {
+&"RESET": SubResource("Animation_sbite"),
+&"despawn": SubResource("Animation_3iqeo"),
+&"flip": SubResource("Animation_uug04"),
+&"selected": SubResource("Animation_fg68k"),
+&"zoom": SubResource("Animation_xrdwo")
+}
+
+[node name="Upgrade_Back_N" type="Node3D" unique_id=459408611]
+script = ExtResource("1_uug04")
+
+[node name="ParallaxCard_Foil_01" type="Sprite3D" parent="." unique_id=812637643]
+transform = Transform3D(-4.371139e-08, 0, 1, 0, 1, 0, -1, 0, -4.371139e-08, 0, 0, 0)
+material_override = ExtResource("1_8crt1")
+texture_filter = 0
+texture = ExtResource("2_sbite")
+
+[node name="UpgradeDetail" type="MeshInstance3D" parent="ParallaxCard_Foil_01" unique_id=88411857]
+transform = Transform3D(-1, 8.742278e-08, -3.821371e-15, 0, -4.371139e-08, -1, -8.742278e-08, -1, 4.371139e-08, 6.171024e-11, 0, -0.0014117658)
+cast_shadow = 0
+mesh = SubResource("PlaneMesh_mxsx2")
+surface_material_override/0 = SubResource("StandardMaterial3D_uug04")
+
+[node name="SubViewport" type="SubViewport" parent="ParallaxCard_Foil_01" unique_id=2019195713]
+size = Vector2i(768, 1024)
+
+[node name="UpgradeTemplate" parent="ParallaxCard_Foil_01/SubViewport" unique_id=1554697993 instance=ExtResource("3_sbite")]
+
+[node name="Area3D" type="Area3D" parent="." unique_id=1398259608]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Area3D" unique_id=1071962440]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0020141602, -0.00024414063, -0.0010375977)
+shape = SubResource("BoxShape3D_mxsx2")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=737036650]
+libraries/ = SubResource("AnimationLibrary_xrdwo")
+
+[connection signal="input_event" from="Area3D" to="." method="_on_area_3d_input_event"]
+[connection signal="mouse_entered" from="Area3D" to="." method="_on_area_3d_mouse_entered"]
+[connection signal="mouse_exited" from="Area3D" to="." method="_on_area_3d_mouse_exited"]

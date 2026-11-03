@@ -1,0 +1,42 @@
+[gd_scene format=3 uid="uid://d0yhn1kxot51n"]
+
+[ext_resource type="PackedScene" uid="uid://bo8njy0m0bk8v" path="res://Assets/3D/Buildings/HerbalistHouse.glb" id="1_sefbd"]
+[ext_resource type="PackedScene" uid="uid://1qmjoy1ncmwa" path="res://Assets/3D/Buildings/Firewood.glb" id="2_awxg4"]
+[ext_resource type="PackedScene" uid="uid://castwkfi34ihc" path="res://Assets/3D/Props/Rake.glb" id="3_k7cg4"]
+[ext_resource type="PackedScene" uid="uid://bgxi55ipoqsd" path="res://Assets/3D/Decor/3-Table.glb" id="4_k7cg4"]
+[ext_resource type="PackedScene" uid="uid://ckn4qv5sg5a6x" path="res://Assets/3D/Decor/Candle_Bundle.glb" id="5_2fuji"]
+[ext_resource type="PackedScene" uid="uid://chje2wbav0msd" path="res://Assets/3D/Decor/Bottles.glb" id="6_3uxk7"]
+[ext_resource type="PackedScene" uid="uid://bchjmm2aj0cfo" path="res://Assets/3D/Decor/Mandrake.glb" id="7_up51x"]
+[ext_resource type="PackedScene" uid="uid://bd5mw5iqkedt2" path="res://Assets/3D/Decor/Batwing.glb" id="8_56juw"]
+[ext_resource type="PackedScene" uid="uid://djbr4rfs23464" path="res://Assets/3D/Decor/Mugwort.glb" id="9_cxlu7"]
+
+[node name="Node3D" type="Node3D" unique_id=2132275752]
+
+[node name="HerbalistHouse" parent="." unique_id=628353574 instance=ExtResource("1_sefbd")]
+
+[node name="Firewood" parent="HerbalistHouse" unique_id=1531571886 instance=ExtResource("2_awxg4")]
+transform = Transform3D(2.9802322e-08, 0, -1, 0, 1, 0, 1, 0, 2.9802322e-08, 4.4992323, 0.15163994, 0.657774)
+
+[node name="Rake2" parent="HerbalistHouse" unique_id=347872972 instance=ExtResource("3_k7cg4")]
+transform = Transform3D(-0.97965306, -0.06159561, -0.1910136, -3.2932952e-08, 0.9517402, -0.306905, 0.20069921, -0.30066037, -0.932375, 2.2036839, 0.32917655, 2.0724354)
+
+[node name="3-Table2" parent="." unique_id=312884684 instance=ExtResource("4_k7cg4")]
+transform = Transform3D(0.9251532, 0, 0, 0, 1, 0, 0, 0, 1, -1.138232, 0, 0.48939824)
+
+[node name="3-Table3" parent="." unique_id=2127061370 instance=ExtResource("4_k7cg4")]
+transform = Transform3D(0.9251532, 0, 0, 0, 1, 0, 0, 0, 1, 1.0950797, 0, 0.48939824)
+
+[node name="Candle_Bundle2" parent="." unique_id=1906983190 instance=ExtResource("5_2fuji")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.7828202, 0.5794316, 0.65844285)
+
+[node name="Bottles2" parent="." unique_id=1769110902 instance=ExtResource("6_3uxk7")]
+transform = Transform3D(-0.9696147, 0, -0.24463722, 0, 1, 0, 0.24463722, 0, -0.9696147, 1.1481459, 0.59689534, 0.41183662)
+
+[node name="Mandrake2" parent="." unique_id=1924661458 instance=ExtResource("7_up51x")]
+transform = Transform3D(-0.2355391, 0, 0.9718649, 0, 1, 0, -0.9718649, 0, -0.2355391, -1.047642, 0.70202315, 0.54461026)
+
+[node name="Batwing2" parent="." unique_id=1353923754 instance=ExtResource("8_56juw")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.07786611, 1.6551411, -1.2254065)
+
+[node name="Mugwort2" parent="." unique_id=1337383902 instance=ExtResource("9_cxlu7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114996076, 0.23173988, -1.288872)

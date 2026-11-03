@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dheey1jkj5xue"]
+
+[ext_resource type="PackedScene" uid="uid://c3f5k6746lv43" path="res://_Scene/Entities/npc_1.tscn" id="1_s4nht"]
+[ext_resource type="Resource" uid="uid://cw6ttuqqwu2as" path="res://_Scene/Entities/npc_2.dialogue" id="2_15p7e"]
+
+[node name="NPC_2" unique_id=394437078 instance=ExtResource("1_s4nht")]
+dialogue = ExtResource("2_15p7e")

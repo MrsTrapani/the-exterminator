@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://e4xebfvodwma"]
+
+[ext_resource type="PackedScene" uid="uid://cmqnjiqn2buy2" path="res://Assets/3D/Props/Bulletin_Board.glb" id="1_1y1jf"]
+
+[node name="BulletinBoard" type="Node3D" unique_id=1969216872]
+
+[node name="Bulletin_Board" parent="." unique_id=502211917 instance=ExtResource("1_1y1jf")]

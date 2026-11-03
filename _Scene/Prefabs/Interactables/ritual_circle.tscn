@@ -1,0 +1,7 @@
+[gd_scene format=3 uid="uid://dyciqtwecn5ib"]
+
+[ext_resource type="PackedScene" uid="uid://ce44ajga8gv7o" path="res://Assets/3D/Decor/RitualCircle.glb" id="1_a8g56"]
+
+[node name="RitualCircle" type="Node3D" unique_id=653714571]
+
+[node name="RitualCircle2" parent="." unique_id=1725570202 instance=ExtResource("1_a8g56")]

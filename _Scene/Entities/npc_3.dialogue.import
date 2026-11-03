@@ -1,0 +1,16 @@
+[remap]
+
+importer="dialogue_manager"
+importer_version=18
+type="Resource"
+uid="uid://divvvaxdeaksm"
+path="res://.godot/imported/npc_3.dialogue-1eb6adbeb9599110fd09da0d3ae99a9b.tres"
+
+[deps]
+
+source_file="res://_Scene/Entities/npc_3.dialogue"
+dest_files=["res://.godot/imported/npc_3.dialogue-1eb6adbeb9599110fd09da0d3ae99a9b.tres"]
+
+[params]
+
+defaults=true

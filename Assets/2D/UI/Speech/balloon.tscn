@@ -1,0 +1,128 @@
+[gd_scene format=3 uid="uid://d3m5io5nfaxc7"]
+
+[ext_resource type="Script" uid="uid://cwix7ei6q4at0" path="res://Assets/2D/UI/Speech/balloon.gd" id="1_36de5"]
+[ext_resource type="Texture2D" uid="uid://c7k6xbovnjod2" path="res://Assets/2D/UI/Speech/Cartoon RPG UI_Window - Popup.png" id="2_5ojcl"]
+[ext_resource type="PackedScene" uid="uid://ckvgyvclnwggo" path="res://Externals/DialogueManager/nodes/dialogue_label/dialogue_label.tscn" id="2_a8ve6"]
+[ext_resource type="FontFile" uid="uid://dw21cnk7vpkf" path="res://Assets/Font/BorderWall.otf" id="3_a47ds"]
+[ext_resource type="Texture2D" uid="uid://cjalc6e8mbn7m" path="res://Assets/2D/Icons/Inputs/UI_Input_Keyboard_E.png" id="5_a47ds"]
+
+[sub_resource type="Animation" id="Animation_nlsx6"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Progress:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_qkmqt"]
+resource_name = "progress"
+loop_mode = 1
+step = 0.1
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Progress:position:y")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0, 0, 0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 0, -0.25, 0, 0.2, -0.0157438, -4, -0.2, 0.0112069, 0.25, 0, -4, -0.25, 0, 0.25, 0, 0, -0.2, 0.00299701, 0.25, 0),
+"times": PackedFloat32Array(0, 0.1, 0.5, 0.6, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_1337t"]
+_data = {
+&"RESET": SubResource("Animation_nlsx6"),
+&"progress": SubResource("Animation_qkmqt")
+}
+
+[node name="ExampleBalloon" type="CanvasLayer" unique_id=38036521]
+layer = 100
+script = ExtResource("1_36de5")
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="." unique_id=1162558754]
+unique_name_in_owner = true
+
+[node name="Balloon" type="TextureRect" parent="." unique_id=379996957]
+unique_name_in_owner = true
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -360.0
+offset_top = -400.0
+offset_right = 360.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.8, 0.8)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("2_5ojcl")
+
+[node name="CharacterLabel" type="RichTextLabel" parent="Balloon" unique_id=736541666]
+unique_name_in_owner = true
+modulate = Color(1, 1, 1, 0.501961)
+custom_maximum_size = Vector2(600, -1)
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_top = 61.0
+offset_bottom = 84.0
+grow_horizontal = 2
+mouse_filter = 1
+theme_override_fonts/normal_font = ExtResource("3_a47ds")
+theme_override_font_sizes/normal_font_size = 50
+bbcode_enabled = true
+text = "Character"
+fit_content = true
+scroll_active = false
+
+[node name="DialogueLabel" parent="Balloon" unique_id=1301798052 instance=ExtResource("2_a8ve6")]
+unique_name_in_owner = true
+custom_minimum_size = Vector2(600, 200)
+custom_maximum_size = Vector2(600, 200)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -300.0
+offset_top = -70.0
+offset_right = 300.0
+offset_bottom = 130.0
+grow_vertical = 2
+size_flags_vertical = 3
+theme_override_fonts/normal_font = ExtResource("3_a47ds")
+theme_override_font_sizes/normal_font_size = 40
+text = "Dialogue..."
+
+[node name="Control" type="Control" parent="Balloon" unique_id=418507161]
+custom_minimum_size = Vector2(20, 10)
+anchors_preset = 0
+offset_left = 1774.0
+offset_top = 143.0
+offset_right = 1794.0
+offset_bottom = 153.0
+size_flags_vertical = 8
+
+[node name="Progress" type="Polygon2D" parent="Balloon/Control" unique_id=2091292889]
+unique_name_in_owner = true
+visible = false
+position = Vector2(-1146, 0)
+color = Color(1, 1, 1, 0)
+polygon = PackedVector2Array(0, 0, 10, 10, 20, 0)
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Balloon/Control" unique_id=1602634471]
+libraries/ = SubResource("AnimationLibrary_1337t")
+autoplay = &"progress"
+
+[node name="UiInputKeyboardE" type="Sprite2D" parent="Balloon" unique_id=1872236114]
+position = Vector2(678, 348)
+texture = ExtResource("5_a47ds")

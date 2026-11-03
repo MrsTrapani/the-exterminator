@@ -1,0 +1,20 @@
+[gd_scene format=3 uid="uid://bhmuyhxfuaoim"]
+
+[ext_resource type="PackedScene" uid="uid://c2wnq8cmk5ly5" path="res://Assets/3D/Buildings/Well.glb" id="1_urbr6"]
+
+[sub_resource type="CylinderMesh" id="CylinderMesh_mxsx2"]
+top_radius = 0.48
+bottom_radius = 0.48
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_4ft2c"]
+shading_mode = 0
+albedo_color = Color(0, 0, 0, 1)
+
+[node name="Well" type="Node3D" unique_id=357577590]
+
+[node name="Well" parent="." unique_id=987926911 instance=ExtResource("1_urbr6")]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="." unique_id=1327617926]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.56361914, 0)
+mesh = SubResource("CylinderMesh_mxsx2")
+surface_material_override/0 = SubResource("StandardMaterial3D_4ft2c")

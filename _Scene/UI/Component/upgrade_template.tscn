@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://tmilhm8ra4wi"]
+
+[ext_resource type="FontFile" uid="uid://rpvr2oxgemiu" path="res://Assets/Font/MouldyCheese.ttf" id="1_8gas3"]
+[ext_resource type="Texture2D" uid="uid://b8q2umdna7mlq" path="res://Assets/2D/UI/Card/CardBack.png" id="1_u3nn3"]
+[ext_resource type="Texture2D" uid="uid://d2sal6jrtrmlr" path="res://Assets/2D/Icons/Skills/s3.png" id="2_b4im5"]
+[ext_resource type="Shader" uid="uid://bjgfls2o2arjd" path="res://Scripts/Shader/Foil.gdshader" id="3_rv8s4"]
+[ext_resource type="Texture2D" uid="uid://ggvh5enpneqn" path="res://Assets/2D/UI/Card/SkillIconBackground.png" id="3_slxos"]
+[ext_resource type="Texture2D" uid="uid://by1fqd8lrqxp4" path="res://Assets/2D/UI/Card/SkillIconArea.png" id="4_7toch"]
+[ext_resource type="Texture2D" uid="uid://bmbsjnqnsxfbr" path="res://Assets/2D/UI/Card/CardFoil.png" id="4_rv8s4"]
+[ext_resource type="Texture2D" uid="uid://c8up0tyeb2r1r" path="res://Assets/2D/UI/Card/SkillLevelBackground.png" id="6_7toch"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_mxsx2"]
+shader = ExtResource("3_rv8s4")
+shader_parameter/foil_strength = 0.400000019
+shader_parameter/rainbow_scale = 1.5
+shader_parameter/shine_strength = 0.30000001425
+shader_parameter/shine_width = 0.12
+shader_parameter/speed = 0.30000001425
+shader_parameter/foil_offset = 0.0
+
+[node name="UpgradeTemplate" type="Control" unique_id=1554697993]
+custom_minimum_size = Vector2(768, 1024)
+custom_maximum_size = Vector2(768, 1024)
+layout_mode = 3
+anchors_preset = 0
+offset_right = 768.0
+offset_bottom = 1024.0
+
+[node name="CardBack" type="TextureRect" parent="." unique_id=610666708]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_u3nn3")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="CardBack" unique_id=1396284266]
+custom_minimum_size = Vector2(650, 800)
+custom_maximum_size = Vector2(620, 800)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="SkillName" type="RichTextLabel" parent="CardBack/VBoxContainer" unique_id=409385446]
+z_index = 1
+custom_minimum_size = Vector2(0, 80)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.6491331, 0.83420074, 0.8936019, 1)
+theme_override_fonts/normal_font = ExtResource("1_8gas3")
+theme_override_font_sizes/normal_font_size = 80
+text = "Skill 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkillIconBackground" type="TextureRect" parent="CardBack/VBoxContainer" unique_id=1592941115]
+z_index = 1
+custom_minimum_size = Vector2(350, 350)
+custom_maximum_size = Vector2(350, 350)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("3_slxos")
+
+[node name="SkillArea" type="TextureRect" parent="CardBack/VBoxContainer/SkillIconBackground" unique_id=1902519506]
+clip_children = 2
+custom_minimum_size = Vector2(350, 350)
+custom_maximum_size = Vector2(350, 350)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+texture = ExtResource("4_7toch")
+
+[node name="SkillIcon" type="TextureRect" parent="CardBack/VBoxContainer/SkillIconBackground/SkillArea" unique_id=1030959727]
+custom_minimum_size = Vector2(350, 350)
+custom_maximum_size = Vector2(350, 350)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_b4im5")
+
+[node name="SkillLevelBackground" type="TextureRect" parent="CardBack/VBoxContainer" unique_id=1987028981]
+custom_minimum_size = Vector2(350, 100)
+custom_maximum_size = Vector2(350, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+texture = ExtResource("6_7toch")
+
+[node name="SkillLevel" type="RichTextLabel" parent="CardBack/VBoxContainer/SkillLevelBackground" unique_id=623064266]
+z_index = 1
+custom_minimum_size = Vector2(0, 75)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/default_color = Color(0.009851543, 0.013160292, 0.051243737, 1)
+theme_override_fonts/normal_font = ExtResource("1_8gas3")
+theme_override_font_sizes/normal_font_size = 60
+text = "Level 0"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="SkillDescription" type="RichTextLabel" parent="CardBack/VBoxContainer" unique_id=1438753645]
+z_index = 1
+custom_minimum_size = Vector2(0, 200)
+layout_mode = 2
+theme_override_colors/default_color = Color(0.009851543, 0.013160292, 0.051243737, 1)
+theme_override_colors/font_shadow_color = Color(0.6491331, 0.83420074, 0.8936019, 1)
+theme_override_constants/shadow_outline_size = 10
+theme_override_constants/shadow_offset_x = 0
+theme_override_constants/shadow_offset_y = 0
+theme_override_fonts/normal_font = ExtResource("1_8gas3")
+theme_override_font_sizes/normal_font_size = 50
+text = "Summons a sphere of light that damages the nearest enemy."
+horizontal_alignment = 1
+
+[node name="CardFoil" type="TextureRect" parent="CardBack" unique_id=69058298]
+modulate = Color(1, 1, 1, 0.19607843)
+material = SubResource("ShaderMaterial_mxsx2")
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("4_rv8s4")
