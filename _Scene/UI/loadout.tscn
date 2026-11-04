@@ -1,0 +1,414 @@
+[gd_scene format=3 uid="uid://dw5svoj40ecfi"]
+
+[ext_resource type="PackedScene" uid="uid://jua8rex5olek" path="res://_Scene/Upgrades/skill_icon.tscn" id="1_73qpi"]
+[ext_resource type="Script" uid="uid://cvxxnrbma13wd" path="res://Scripts/UI/loadout.gd" id="1_aj5yn"]
+[ext_resource type="Texture2D" uid="uid://bbx57gnivvrfa" path="res://Assets/2D/UI/Screentone/loadout_screentone.png" id="2_tctmq"]
+[ext_resource type="Texture2D" uid="uid://c15hapupsuoiv" path="res://Assets/2D/Icons/Inputs/UI_Input_Keyboard_Shift.png" id="2_vb4mk"]
+[ext_resource type="Texture2D" uid="uid://waj67scxxm0f" path="res://Assets/2D/Icons/Inputs/UI_Input_Keyboard_1.png" id="3_76d43"]
+[ext_resource type="Texture2D" uid="uid://b5ks6yhten5cr" path="res://Assets/2D/Icons/Inputs/UI_Input_Keyboard_2.png" id="4_ycjeo"]
+[ext_resource type="Texture2D" uid="uid://vd7626ur31my" path="res://Assets/2D/Icons/Inputs/UI_Input_Keyboard_3.png" id="5_rnoag"]
+[ext_resource type="Texture2D" uid="uid://btxpkv88b33mm" path="res://Assets/2D/UI/Card/loadout_parchment.png" id="6_rnoag"]
+[ext_resource type="PackedScene" uid="uid://skr246fdsn4f" path="res://_Scene/Upgrades/loadout_icon.tscn" id="7_ycjeo"]
+[ext_resource type="Resource" uid="uid://b4nbe7uaoqo1j" path="res://Scripts/Resources/Skills/melee_2.tres" id="8_fmivo"]
+[ext_resource type="FontFile" uid="uid://cjorrnepiwcv7" path="res://Assets/Font/Peanut Butter.ttf" id="8_rnoag"]
+[ext_resource type="Resource" uid="uid://d1108hr6f7yp6" path="res://Scripts/Resources/Skills/melee_3.tres" id="9_aj5yn"]
+[ext_resource type="Resource" uid="uid://dwtwsub62sgk7" path="res://Scripts/Resources/Skills/ranged_1.tres" id="10_vilo6"]
+[ext_resource type="Resource" uid="uid://cajqe33brelka" path="res://Scripts/Resources/Skills/ranged_2.tres" id="11_u6i53"]
+[ext_resource type="Resource" uid="uid://dcx423vda5e0p" path="res://Scripts/Resources/Skills/ranged_3.tres" id="12_cndhl"]
+[ext_resource type="Resource" uid="uid://cqo2ayhmsxkn0" path="res://Scripts/Resources/Skills/buff_1.tres" id="13_rehmd"]
+[ext_resource type="Resource" uid="uid://u848e6vq5qp6" path="res://Scripts/Resources/Skills/buff_3.tres" id="14_tctmq"]
+[ext_resource type="Resource" uid="uid://yvxp482d63ej" path="res://Scripts/Resources/Skills/buff_2.tres" id="16_3vjeg"]
+[ext_resource type="Texture2D" uid="uid://b85tqukpifgt8" path="res://Assets/2D/UI/Button/Artboard 32.png" id="17_cndhl"]
+[ext_resource type="Texture2D" uid="uid://c3a78nja07sxs" path="res://Assets/2D/UI/Button/Artboard 32 copy 2.png" id="18_rehmd"]
+[ext_resource type="Texture2D" uid="uid://c1up2d1macqgv" path="res://Assets/2D/UI/Button/Artboard 32 copy.png" id="19_tctmq"]
+[ext_resource type="FontFile" uid="uid://dw21cnk7vpkf" path="res://Assets/Font/BorderWall.otf" id="20_rehmd"]
+
+[sub_resource type="Animation" id="Animation_tctmq"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadoutBG:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_3vjeg"]
+resource_name = "unroll"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("LoadoutBG:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(0, 1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ww0kr"]
+_data = {
+&"RESET": SubResource("Animation_tctmq"),
+&"unroll": SubResource("Animation_3vjeg")
+}
+
+[node name="Loadout" type="Control" unique_id=1300223285]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_aj5yn")
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=932446273]
+modulate = Color(1, 1, 1, 0.5882353)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_tctmq")
+expand_mode = 1
+
+[node name="SkillBar" type="HBoxContainer" parent="." unique_id=191012602]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -330.0
+offset_top = -200.0
+offset_right = 330.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Icon" parent="SkillBar" unique_id=941943084 instance=ExtResource("1_73qpi")]
+layout_mode = 2
+
+[node name="Key" type="TextureRect" parent="SkillBar/Icon" unique_id=1116306317]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -53.0
+offset_right = 85.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_vb4mk")
+
+[node name="Icon2" parent="SkillBar" unique_id=1550384733 instance=ExtResource("1_73qpi")]
+layout_mode = 2
+slot_number = 2
+
+[node name="Key" type="TextureRect" parent="SkillBar/Icon2" unique_id=19297724]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -53.0
+offset_right = 85.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_76d43")
+
+[node name="Icon3" parent="SkillBar" unique_id=1833313758 instance=ExtResource("1_73qpi")]
+layout_mode = 2
+slot_number = 3
+
+[node name="Key" type="TextureRect" parent="SkillBar/Icon3" unique_id=20663167]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -53.0
+offset_right = 85.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_ycjeo")
+
+[node name="Icon4" parent="SkillBar" unique_id=843275869 instance=ExtResource("1_73qpi")]
+layout_mode = 2
+slot_number = 4
+
+[node name="Key" type="TextureRect" parent="SkillBar/Icon4" unique_id=1419065127]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -53.0
+offset_right = 85.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_rnoag")
+
+[node name="LoadoutBG" type="TextureRect" parent="." unique_id=1055035814]
+custom_minimum_size = Vector2(1200, -1)
+custom_maximum_size = Vector2(1200, -1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -600.0
+offset_top = -409.0
+offset_right = 600.0
+offset_bottom = 311.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("6_rnoag")
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="LoadoutBG" unique_id=1006213512]
+layout_mode = 1
+offset_left = 235.0
+offset_top = 221.0
+offset_right = 705.0
+offset_bottom = 712.25
+scale = Vector2(0.8, 0.8)
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LoadoutBG/VBoxContainer" unique_id=1148632173]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="LoadoutIcon" parent="LoadoutBG/VBoxContainer/HBoxContainer" unique_id=1234502605 instance=ExtResource("7_ycjeo")]
+layout_mode = 2
+
+[node name="LoadoutIcon2" parent="LoadoutBG/VBoxContainer/HBoxContainer" unique_id=163427841 instance=ExtResource("7_ycjeo")]
+layout_mode = 2
+skill_resource = ExtResource("8_fmivo")
+
+[node name="LoadoutIcon3" parent="LoadoutBG/VBoxContainer/HBoxContainer" unique_id=1706342660 instance=ExtResource("7_ycjeo")]
+layout_mode = 2
+skill_resource = ExtResource("9_aj5yn")
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="LoadoutBG/VBoxContainer" unique_id=832215689]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="LoadoutIcon" parent="LoadoutBG/VBoxContainer/HBoxContainer2" unique_id=1439199557 instance=ExtResource("7_ycjeo")]
+layout_mode = 2
+skill_resource = ExtResource("10_vilo6")
+
+[node name="LoadoutIcon2" parent="LoadoutBG/VBoxContainer/HBoxContainer2" unique_id=290303965 instance=ExtResource("7_ycjeo")]
+layout_mode = 2
+skill_resource = ExtResource("11_u6i53")
+
+[node name="LoadoutIcon3" parent="LoadoutBG/VBoxContainer/HBoxContainer2" unique_id=2009308455 instance=ExtResource("7_ycjeo")]
+layout_mode = 2
+skill_resource = ExtResource("12_cndhl")
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="LoadoutBG/VBoxContainer" unique_id=2134060579]
+layout_mode = 2
+theme_override_constants/separation = 10
+alignment = 1
+
+[node name="LoadoutIcon" parent="LoadoutBG/VBoxContainer/HBoxContainer3" unique_id=1759649943 instance=ExtResource("7_ycjeo")]
+layout_mode = 2
+skill_resource = ExtResource("13_rehmd")
+
+[node name="LoadoutIcon2" parent="LoadoutBG/VBoxContainer/HBoxContainer3" unique_id=1224202831 instance=ExtResource("7_ycjeo")]
+layout_mode = 2
+skill_resource = ExtResource("16_3vjeg")
+
+[node name="LoadoutIcon3" parent="LoadoutBG/VBoxContainer/HBoxContainer3" unique_id=1693241428 instance=ExtResource("7_ycjeo")]
+layout_mode = 2
+skill_resource = ExtResource("14_tctmq")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="LoadoutBG" unique_id=565911353]
+layout_mode = 0
+offset_left = 640.0
+offset_top = 226.0
+offset_right = 957.0
+offset_bottom = 593.0
+
+[node name="SkillName" type="Label" parent="LoadoutBG/VBoxContainer2" unique_id=1206222454]
+custom_minimum_size = Vector2(300, 0)
+custom_maximum_size = Vector2(300, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("20_rehmd")
+theme_override_font_sizes/font_size = 55
+text = "[SkillName]"
+autowrap_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="LoadoutBG/VBoxContainer2" unique_id=926935987]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="SkillCD" type="Label" parent="LoadoutBG/VBoxContainer2/HBoxContainer" unique_id=2083321727]
+custom_minimum_size = Vector2(150, 0)
+custom_maximum_size = Vector2(150, 50)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("20_rehmd")
+theme_override_font_sizes/font_size = 30
+text = "Cooldown:"
+autowrap_mode = 2
+
+[node name="SkillCDNum" type="Label" parent="LoadoutBG/VBoxContainer2/HBoxContainer" unique_id=1433970491]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("20_rehmd")
+theme_override_font_sizes/font_size = 30
+text = "[0s]"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="LoadoutBG/VBoxContainer2" unique_id=2013137665]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="SkillRange" type="Label" parent="LoadoutBG/VBoxContainer2/HBoxContainer2" unique_id=636218046]
+custom_minimum_size = Vector2(150, 0)
+custom_maximum_size = Vector2(150, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("20_rehmd")
+theme_override_font_sizes/font_size = 30
+text = "Range:"
+autowrap_mode = 2
+
+[node name="SkillRangeType" type="Label" parent="LoadoutBG/VBoxContainer2/HBoxContainer2" unique_id=1744425069]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("20_rehmd")
+theme_override_font_sizes/font_size = 30
+text = "[0s]"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="LoadoutBG/VBoxContainer2" unique_id=947687987]
+layout_mode = 2
+theme_override_constants/separation = 0
+
+[node name="SkillCast" type="Label" parent="LoadoutBG/VBoxContainer2/HBoxContainer3" unique_id=1574742030]
+custom_minimum_size = Vector2(150, 0)
+custom_maximum_size = Vector2(150, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("20_rehmd")
+theme_override_font_sizes/font_size = 30
+text = "Cast time:"
+autowrap_mode = 2
+
+[node name="SkillCastTime" type="Label" parent="LoadoutBG/VBoxContainer2/HBoxContainer3" unique_id=1994604137]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("20_rehmd")
+theme_override_font_sizes/font_size = 30
+text = "[0s]"
+
+[node name="Blank" type="Label" parent="LoadoutBG/VBoxContainer2" unique_id=769603824]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("20_rehmd")
+theme_override_font_sizes/font_size = 30
+
+[node name="SkillDescription2" type="Label" parent="LoadoutBG/VBoxContainer2" unique_id=1342037051]
+custom_minimum_size = Vector2(315, 0)
+custom_maximum_size = Vector2(315, -1)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("20_rehmd")
+theme_override_font_sizes/font_size = 30
+text = "[SkillDescription]"
+autowrap_mode = 2
+
+[node name="Label" type="Label" parent="LoadoutBG" unique_id=909805993]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.00012
+offset_top = 90.999985
+offset_right = 231.99988
+offset_bottom = 206.0
+grow_horizontal = 2
+rotation = -0.050614547
+theme_override_colors/font_color = Color(0.51113707, 0.18201324, 0.17451027, 1)
+theme_override_fonts/font = ExtResource("8_rnoag")
+theme_override_font_sizes/font_size = 100
+text = "Skill Loadout"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ProceedButton" type="TextureButton" parent="." unique_id=1353280636]
+layout_mode = 1
+anchors_preset = 3
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -425.0
+offset_top = -171.0
+offset_right = -47.453735
+offset_bottom = -45.0
+grow_horizontal = 0
+grow_vertical = 0
+texture_normal = ExtResource("17_cndhl")
+texture_pressed = ExtResource("18_rehmd")
+texture_hover = ExtResource("18_rehmd")
+texture_disabled = ExtResource("19_tctmq")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="ProceedButton" unique_id=1260829740]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.5
+offset_top = -65.0
+offset_right = 228.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0, 0.2784314, 0.34901962, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("20_rehmd")
+theme_override_font_sizes/font_size = 80
+text = "Confirm"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1804011027]
+libraries/ = SubResource("AnimationLibrary_ww0kr")

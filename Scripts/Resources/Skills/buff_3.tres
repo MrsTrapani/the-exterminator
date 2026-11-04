@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://u848e6vq5qp6"]
+
+[ext_resource type="Script" uid="uid://v2f352072rk5" path="res://Scripts/Resources/skill_resource.gd" id="1_8i6rh"]
+[ext_resource type="Texture2D" uid="uid://b5i83ki0yptqr" path="res://Assets/2D/Icons/Skills/Placeholder/38.png" id="2_svjxx"]
+
+[resource]
+script = ExtResource("1_8i6rh")
+skill_name = "Attuned"
+skill_icon = ExtResource("2_svjxx")
+skill_description = "Increases your auto-attack damage for 5 seconds."
+skill_cooldown = 10.0
+skill_range = 2

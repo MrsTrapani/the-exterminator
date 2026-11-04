@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://dcx423vda5e0p"]
+
+[ext_resource type="Script" uid="uid://v2f352072rk5" path="res://Scripts/Resources/skill_resource.gd" id="1_mnd86"]
+[ext_resource type="Texture2D" uid="uid://dodde8hng76o4" path="res://Assets/2D/Icons/Skills/Placeholder/47.png" id="2_6sb8t"]
+
+[resource]
+script = ExtResource("1_mnd86")
+skill_name = "Attuned"
+skill_icon = ExtResource("2_6sb8t")
+skill_description = "Increases your auto"
+skill_damage = 50.0
+skill_cooldown = 3.0
+skill_range = 1

@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://b4nbe7uaoqo1j"]
+
+[ext_resource type="Script" uid="uid://v2f352072rk5" path="res://Scripts/Resources/skill_resource.gd" id="1_pljpj"]
+[ext_resource type="Texture2D" uid="uid://bj64kttwdsetp" path="res://Assets/2D/Icons/Skills/Placeholder/35.png" id="2_7lfip"]
+
+[resource]
+script = ExtResource("1_pljpj")
+skill_name = "Fleshrender"
+skill_icon = ExtResource("2_7lfip")
+skill_description = "Deal heavy damage to one target."
+skill_damage = 500.0
+skill_cooldown = 15.0

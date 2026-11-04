@@ -1,6 +1,7 @@
 [gd_scene format=3 uid="uid://cevgyhdqrh58i"]
 
 [ext_resource type="Script" uid="uid://qlsl4fder4j0" path="res://Scripts/Cards/upgrade_spawner.gd" id="1_awgwm"]
+[ext_resource type="Script" uid="uid://c4x2ttvqfutu7" path="res://Scripts/Game/test.gd" id="1_pquh0"]
 [ext_resource type="PackedScene" uid="uid://dkupjvu28eg04" path="res://_Scene/Upgrades/upgrade_back_n.tscn" id="2_vj45a"]
 [ext_resource type="Sky" uid="uid://dh771nio3jfo8" path="res://Externals/Binbun/SkiesFull/assets/BinbunSky/skies/stylized/stylized_warm_sky_01.tres" id="3_qylmw"]
 [ext_resource type="PackedScene" uid="uid://crqp3pcxlr4yx" path="res://_Scene/Map/map_field.tscn" id="4_yfkum"]
@@ -16,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://hkbjxx1fnhrv" path="res://_Scene/Entities/npc_8.tscn" id="14_sirnc"]
 [ext_resource type="PackedScene" uid="uid://c0hurr44m4p3u" path="res://_Scene/Entities/npc_9.tscn" id="15_hh4bs"]
 [ext_resource type="PackedScene" uid="uid://c8jh1jqugwb8t" path="res://_Scene/Entities/npc_10.tscn" id="16_wrsqx"]
+[ext_resource type="PackedScene" uid="uid://dw5svoj40ecfi" path="res://_Scene/UI/loadout.tscn" id="17_wrsqx"]
 
 [sub_resource type="Environment" id="Environment_mxsx2"]
 background_mode = 2
@@ -25,7 +27,9 @@ adjustment_enabled = true
 adjustment_brightness = 1.2
 adjustment_saturation = 1.3
 
-[node name="Test" type="Node3D" unique_id=733729080]
+[node name="Test" type="Node3D" unique_id=733729080 node_paths=PackedStringArray("loadout_ui")]
+script = ExtResource("1_pquh0")
+loadout_ui = NodePath("UI/Loadout")
 
 [node name="Map_Field" parent="." unique_id=1954453889 instance=ExtResource("4_yfkum")]
 
@@ -74,3 +78,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.66858, 0.09522992, -12.078
 
 [node name="NPC_10" parent="Entities" unique_id=1546544562 instance=ExtResource("16_wrsqx")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -20.375732, 0.09510791, -9.592529)
+
+[node name="UI" type="Control" parent="." unique_id=1502936694]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Loadout" parent="UI" unique_id=1300223285 instance=ExtResource("17_wrsqx")]
+layout_mode = 1

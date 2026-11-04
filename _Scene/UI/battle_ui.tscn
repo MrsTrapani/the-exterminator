@@ -1,0 +1,285 @@
+[gd_scene format=3 uid="uid://tx2s0gifyxv7"]
+
+[ext_resource type="Script" uid="uid://p2xpsrav0mds" path="res://Scripts/UI/battle_ui.gd" id="1_60ht8"]
+[ext_resource type="PackedScene" uid="uid://jua8rex5olek" path="res://_Scene/Upgrades/skill_icon.tscn" id="1_c6eje"]
+[ext_resource type="Texture2D" uid="uid://c15hapupsuoiv" path="res://Assets/2D/Icons/Inputs/UI_Input_Keyboard_Shift.png" id="2_32bma"]
+[ext_resource type="Texture2D" uid="uid://waj67scxxm0f" path="res://Assets/2D/Icons/Inputs/UI_Input_Keyboard_1.png" id="3_xhqch"]
+[ext_resource type="Texture2D" uid="uid://b5ks6yhten5cr" path="res://Assets/2D/Icons/Inputs/UI_Input_Keyboard_2.png" id="4_m4o2x"]
+[ext_resource type="Texture2D" uid="uid://vd7626ur31my" path="res://Assets/2D/Icons/Inputs/UI_Input_Keyboard_3.png" id="5_ow4qa"]
+[ext_resource type="Texture2D" uid="uid://cramjcfu3wwg2" path="res://Assets/2D/UI/Bar/Artboard 38.png" id="6_xhqch"]
+[ext_resource type="Texture2D" uid="uid://3jwadqkbpmh" path="res://Assets/2D/UI/Bar/Artboard 39.png" id="7_m4o2x"]
+[ext_resource type="FontFile" uid="uid://dw21cnk7vpkf" path="res://Assets/Font/BorderWall.otf" id="9_60ht8"]
+[ext_resource type="Texture2D" uid="uid://xico2g21ovbq" path="res://Assets/2D/UI/Bar/Artboard 41.png" id="9_ow4qa"]
+
+[node name="BattleUI" type="Control" unique_id=1684835331]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_60ht8")
+
+[node name="SkillBar" type="HBoxContainer" parent="." unique_id=1018800594]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -330.0
+offset_top = -200.0
+offset_right = 330.0
+offset_bottom = -50.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_constants/separation = 20
+
+[node name="Icon" parent="SkillBar" unique_id=941943084 instance=ExtResource("1_c6eje")]
+layout_mode = 2
+
+[node name="Key" type="TextureRect" parent="SkillBar/Icon" unique_id=1207114472]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -53.0
+offset_right = 85.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("2_32bma")
+
+[node name="CD" type="Label" parent="SkillBar/Icon" unique_id=1678235777]
+visible = false
+custom_minimum_size = Vector2(150, 0)
+custom_maximum_size = Vector2(150, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.13725491, 0.18039216, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_60ht8")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Icon2" parent="SkillBar" unique_id=773140830 instance=ExtResource("1_c6eje")]
+layout_mode = 2
+slot_number = 2
+
+[node name="Key" type="TextureRect" parent="SkillBar/Icon2" unique_id=192605949]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -53.0
+offset_right = 85.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("3_xhqch")
+
+[node name="CD" type="Label" parent="SkillBar/Icon2" unique_id=1931335511]
+visible = false
+custom_minimum_size = Vector2(150, 0)
+custom_maximum_size = Vector2(150, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.13725491, 0.18039216, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_60ht8")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Icon3" parent="SkillBar" unique_id=1173498321 instance=ExtResource("1_c6eje")]
+layout_mode = 2
+slot_number = 3
+
+[node name="Key" type="TextureRect" parent="SkillBar/Icon3" unique_id=1246571765]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -53.0
+offset_right = 85.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("4_m4o2x")
+
+[node name="CD" type="Label" parent="SkillBar/Icon3" unique_id=296825124]
+visible = false
+custom_minimum_size = Vector2(150, 0)
+custom_maximum_size = Vector2(150, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.13725491, 0.18039216, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_60ht8")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Icon4" parent="SkillBar" unique_id=110681234 instance=ExtResource("1_c6eje")]
+layout_mode = 2
+slot_number = 4
+
+[node name="Key" type="TextureRect" parent="SkillBar/Icon4" unique_id=2093115471]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -43.0
+offset_top = -53.0
+offset_right = 85.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.7, 0.7)
+texture = ExtResource("5_ow4qa")
+
+[node name="CD" type="Label" parent="SkillBar/Icon4" unique_id=1347636169]
+visible = false
+custom_minimum_size = Vector2(150, 0)
+custom_maximum_size = Vector2(150, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.13725491, 0.18039216, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_60ht8")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="HPBar" type="TextureProgressBar" parent="." unique_id=1587272992]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -646.00006
+offset_top = -327.0
+offset_right = 652.0
+offset_bottom = -161.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+value = 100.0
+texture_under = ExtResource("6_xhqch")
+texture_progress = ExtResource("7_m4o2x")
+texture_progress_offset = Vector2(8, 8)
+
+[node name="CastBar" type="TextureProgressBar" parent="." unique_id=1080237937]
+visible = false
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -646.00006
+offset_top = -385.0
+offset_right = 652.0
+offset_bottom = -219.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+value = 100.0
+texture_under = ExtResource("6_xhqch")
+texture_progress = ExtResource("9_ow4qa")
+texture_progress_offset = Vector2(8, 8)
+
+[node name="Label" type="Label" parent="CastBar" unique_id=1671403450]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -51.0
+offset_right = 217.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.13725491, 0.18039216, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_60ht8")
+theme_override_font_sizes/font_size = 80
+text = "Casting spell..."
+
+[node name="Error" type="Label" parent="." unique_id=802830049]
+custom_minimum_size = Vector2(800, 0)
+custom_maximum_size = Vector2(800, -1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -225.00012
+offset_top = 90.999985
+offset_right = 231.99988
+offset_bottom = 206.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.13725491, 0.18039216, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_60ht8")
+theme_override_font_sizes/font_size = 50
+text = "ErrorMessage"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

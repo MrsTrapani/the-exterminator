@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://yvxp482d63ej"]
+
+[ext_resource type="Script" uid="uid://v2f352072rk5" path="res://Scripts/Resources/skill_resource.gd" id="1_pq8ie"]
+[ext_resource type="Texture2D" uid="uid://cqivmucteuw5v" path="res://Assets/2D/Icons/Skills/Placeholder/18.png" id="2_6aocd"]
+
+[resource]
+script = ExtResource("1_pq8ie")
+skill_name = "Dash"
+skill_icon = ExtResource("2_6aocd")
+skill_description = "Dash 2 metres in the direction of travel."
+skill_cooldown = 3.0
+skill_range = 1
+cast_time = 2

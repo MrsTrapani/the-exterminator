@@ -1,0 +1,161 @@
+[gd_scene format=3 uid="uid://skr246fdsn4f"]
+
+[ext_resource type="Script" uid="uid://c1vhg307cuqjv" path="res://Scripts/UI/loadout_icon.gd" id="1_8b20h"]
+[ext_resource type="Texture2D" uid="uid://cn3fvfmqsrue0" path="res://Assets/2D/UI/Card/icon_border.png" id="1_ubpww"]
+[ext_resource type="Resource" uid="uid://dpds77b5iampt" path="res://Scripts/Resources/Skills/melee_1.tres" id="2_1rx5l"]
+[ext_resource type="Texture2D" uid="uid://d2sal6jrtrmlr" path="res://Assets/2D/Icons/Skills/s3.png" id="3_8b20h"]
+[ext_resource type="Texture2D" uid="uid://d4ljwlw43r6yv" path="res://Assets/2D/UI/Card/icon_selector.png" id="3_axho1"]
+[ext_resource type="Texture2D" uid="uid://brei1inq4llvf" path="res://Assets/2D/UI/Card/icon_check.png" id="4_pltoo"]
+
+[sub_resource type="Animation" id="Animation_axho1"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Selector:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_pltoo"]
+resource_name = "selection"
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Selector:scale")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.5, 1),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector2(1, 1), Vector2(1.1, 1.1), Vector2(1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_8b20h"]
+_data = {
+&"RESET": SubResource("Animation_axho1"),
+&"selection": SubResource("Animation_pltoo")
+}
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_u5qm4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ptoq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sanrv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2psgv"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r6726"]
+
+[node name="LoadoutIcon" type="Control" unique_id=941943084]
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 3
+anchor_right = 0.078
+anchor_bottom = 0.13900001
+offset_right = 50.23999
+offset_bottom = 49.87999
+script = ExtResource("1_8b20h")
+skill_resource = ExtResource("2_1rx5l")
+
+[node name="IconBG" type="TextureRect" parent="." unique_id=325843236]
+modulate = Color(0.61145794, 0.2849899, 0.18845338, 1)
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ubpww")
+
+[node name="IconMask" type="TextureRect" parent="." unique_id=39185971]
+clip_children = 1
+custom_minimum_size = Vector2(140, 140)
+custom_maximum_size = Vector2(140, 140)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -70.0
+offset_top = -70.0
+offset_right = 70.0
+offset_bottom = 70.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_ubpww")
+
+[node name="Icon" type="TextureRect" parent="IconMask" unique_id=460512168]
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -75.0
+offset_top = -75.0
+offset_right = 75.0
+offset_bottom = 75.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("3_8b20h")
+
+[node name="Selector" type="TextureRect" parent="." unique_id=287979019]
+modulate = Color(0.6901961, 1, 0.14509805, 1)
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("3_axho1")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=780520551]
+libraries/ = SubResource("AnimationLibrary_8b20h")
+
+[node name="Selected" type="TextureRect" parent="." unique_id=1891271602]
+visible = false
+modulate = Color(0.6901961, 1, 0.14509805, 1)
+custom_minimum_size = Vector2(100, 100)
+custom_maximum_size = Vector2(100, 100)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.0974759, 1.0974759)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+texture = ExtResource("4_pltoo")
+
+[node name="Button" type="Button" parent="." unique_id=1236734276]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/normal = SubResource("StyleBoxEmpty_u5qm4")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_0ptoq")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_sanrv")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_2psgv")
+theme_override_styles/focus = SubResource("StyleBoxEmpty_r6726")
+
+[connection signal="mouse_entered" from="Button" to="." method="_on_button_mouse_entered"]
+[connection signal="mouse_exited" from="Button" to="." method="_on_button_mouse_exited"]
+[connection signal="pressed" from="Button" to="." method="_on_button_pressed"]

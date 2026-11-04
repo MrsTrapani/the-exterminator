@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://dwtwsub62sgk7"]
+
+[ext_resource type="Script" uid="uid://v2f352072rk5" path="res://Scripts/Resources/skill_resource.gd" id="1_ov3fa"]
+[ext_resource type="Texture2D" uid="uid://ci18cydmdy1uq" path="res://Assets/2D/Icons/Skills/Placeholder/4.png" id="2_nbc0r"]
+
+[resource]
+script = ExtResource("1_ov3fa")
+skill_name = "Arcane Bolt"
+skill_icon = ExtResource("2_nbc0r")
+skill_description = "Deal medium damage to one enemy."
+skill_damage = 150.0
+skill_cooldown = 3.0
+skill_range = 1
+cast_time = 1

@@ -29,6 +29,7 @@
 [ext_resource type="Texture2D" uid="uid://b0eufb35esv6p" path="res://Assets/2D/Entities/MC/R_Walk_3.png" id="27_ryjkr"]
 [ext_resource type="Texture2D" uid="uid://on6uf7uwk4rb" path="res://Assets/2D/Entities/MC/R_Walk_4.png" id="28_i2lll"]
 [ext_resource type="Script" uid="uid://df2eswoe5kphj" path="res://Scripts/Entities/player_movement.gd" id="29_movement"]
+[ext_resource type="Texture2D" uid="uid://dny6h2xm3simw" path="res://Assets/2D/Entities/shadow.png" id="30_ww1br"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mxsx2"]
 animations = [{
@@ -215,3 +216,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1590863)
 
 [node name="UpgradeSpawn3" type="Marker3D" parent="CameraPivot/Camera3D" unique_id=1433249408]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 0, -1.1590863)
+
+[node name="Sprite3D" type="Sprite3D" parent="." unique_id=2078357616]
+transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.5, 0, 0.5, -2.1855694e-08, 0, 0.01828146, 0)
+modulate = Color(1, 1, 1, 0.78431374)
+texture = ExtResource("30_ww1br")

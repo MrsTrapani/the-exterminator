@@ -1,0 +1,64 @@
+[gd_scene format=3 uid="uid://jua8rex5olek"]
+
+[ext_resource type="Texture2D" uid="uid://ggvh5enpneqn" path="res://Assets/2D/UI/Card/SkillIconBackground.png" id="1_e7fs7"]
+[ext_resource type="Script" uid="uid://bn7dmumc4yhor" path="res://Scripts/UI/skill_icon.gd" id="1_lle30"]
+[ext_resource type="Texture2D" uid="uid://by1fqd8lrqxp4" path="res://Assets/2D/UI/Card/SkillIconArea.png" id="2_7xudf"]
+[ext_resource type="FontFile" uid="uid://dw21cnk7vpkf" path="res://Assets/Font/BorderWall.otf" id="4_lle30"]
+
+[node name="SkillIcon" type="Control" unique_id=941943084]
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 3
+anchor_right = 0.078
+anchor_bottom = 0.13900001
+offset_right = 50.23999
+offset_bottom = 49.87999
+script = ExtResource("1_lle30")
+
+[node name="IconBG" type="TextureRect" parent="." unique_id=325843236]
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_e7fs7")
+
+[node name="IconMask" type="TextureRect" parent="." unique_id=39185971]
+clip_children = 1
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 150.0
+texture = ExtResource("2_7xudf")
+
+[node name="Icon" type="TextureRect" parent="IconMask" unique_id=460512168]
+custom_minimum_size = Vector2(150, 150)
+custom_maximum_size = Vector2(150, 150)
+layout_mode = 1
+offset_right = 150.0
+offset_bottom = 150.0
+
+[node name="CD" type="Label" parent="IconMask" unique_id=418040028]
+visible = false
+custom_minimum_size = Vector2(150, 0)
+custom_maximum_size = Vector2(150, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.13725491, 0.18039216, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("4_lle30")
+theme_override_font_sizes/font_size = 80
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2

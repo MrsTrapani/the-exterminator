@@ -43,8 +43,8 @@ _subresources={
 "materials": {
 "lambert26.009": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Material/M_Building.tres",
-"use_external/path": "uid://trmfh52bi2mo"
+"use_external/fallback_path": "res://Assets/3D/Buildings/lambert26.009.tres",
+"use_external/path": "uid://j8ck7uc520d3"
 }
 },
 "nodes": {

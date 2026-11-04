@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SkillResource" format=3 uid="uid://cqo2ayhmsxkn0"]
+
+[ext_resource type="Script" uid="uid://v2f352072rk5" path="res://Scripts/Resources/skill_resource.gd" id="1_d28el"]
+[ext_resource type="Texture2D" uid="uid://23yw6unv7urw" path="res://Assets/2D/Icons/Skills/Placeholder/11.png" id="2_adcmy"]
+
+[resource]
+script = ExtResource("1_d28el")
+skill_name = "Second Wind"
+skill_icon = ExtResource("2_adcmy")
+skill_description = "Reset all your cooldown."
+skill_cooldown = 60.0
+skill_range = 2

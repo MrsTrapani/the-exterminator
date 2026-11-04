@@ -14,6 +14,10 @@
 [ext_resource type="PackedScene" uid="uid://hw52ia8jqkkg" path="res://Assets/3D/Decor/Ladder.glb" id="13_7kmo5"]
 [ext_resource type="PackedScene" uid="uid://c6pcw265wlok7" path="res://Assets/3D/Decor/book_stack_b.glb" id="14_dwbyx"]
 [ext_resource type="PackedScene" uid="uid://dyciqtwecn5ib" path="res://_Scene/Prefabs/Interactables/ritual_circle.tscn" id="14_qyoca"]
+[ext_resource type="Texture2D" uid="uid://cjalc6e8mbn7m" path="res://Assets/2D/Icons/Inputs/UI_Input_Keyboard_E.png" id="15_7kmo5"]
+[ext_resource type="Script" uid="uid://c1bbvpdgmjlgg" path="res://Scripts/Interactables/ritual_circle.gd" id="15_dwbyx"]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_u5qm4"]
 
 [node name="Ruins" type="Node3D" unique_id=1829104353]
 
@@ -66,3 +70,18 @@ transform = Transform3D(0.25881907, 0, 0.9659258, 0, 1, 0, -0.9659258, 0, 0.2588
 transform = Transform3D(0.78389555, 0, 0.62089276, 0, 1, 0, -0.62089276, 0, 0.78389555, 6.6708007, 0, 3.4288042)
 
 [node name="RitualCircle" parent="." unique_id=653714571 instance=ExtResource("14_qyoca")]
+script = ExtResource("15_dwbyx")
+
+[node name="InteractArea" type="Area3D" parent="." unique_id=1692330437]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="InteractArea" unique_id=605166]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 0.8583374, 0)
+shape = SubResource("CylinderShape3D_u5qm4")
+
+[node name="InteractPrompt" type="Sprite3D" parent="." unique_id=301425584]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 2.1571937, 0)
+visible = false
+cast_shadow = 0
+billboard = 2
+alpha_cut = 1
+texture = ExtResource("15_7kmo5")
