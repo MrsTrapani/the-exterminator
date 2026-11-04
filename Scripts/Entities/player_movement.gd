@@ -7,9 +7,13 @@ extends CharacterBody3D
 @export var gravity_multiplier: float = 1.8
 @export var camera_sensitivity: float = 0.2
 
+@export var max_health: float = 10000.0
+var current_health: float = 10000.0
+
 @onready var sprite: AnimatedSprite3D = $AnimatedSprite3D
 @onready var camera_pivot: Node3D = $CameraPivot
 @onready var camera: Camera3D = $CameraPivot/Camera3D
+@onready var rotation_indicator: Sprite3D = $RotationIndicator
 
 var facing: String = "F"
 var rotating_camera: bool = false
@@ -19,6 +23,12 @@ var can_move: bool = true
 
 func _ready() -> void:
 	sprite.play("Idle_F")
+
+
+func _process(_delta: float) -> void:
+	var camera_forward := -camera.global_basis.z
+	# The floor indicator's arrow points along local +Z.
+	rotation_indicator.global_rotation.y = atan2(camera_forward.x, camera_forward.z)
 
 
 func _physics_process(delta: float) -> void:

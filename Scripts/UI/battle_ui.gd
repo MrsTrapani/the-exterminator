@@ -1,5 +1,7 @@
 extends Control
 
+@export var player: CharacterBody3D
+
 @onready var icon_1: Control = $SkillBar/Icon
 @onready var icon_2: Control = $SkillBar/Icon2
 @onready var icon_3: Control = $SkillBar/Icon3
@@ -11,6 +13,7 @@ extends Control
 @onready var cd_4: Label = $SkillBar/Icon4/CD
 @onready var cd_labels: Array[Label] = [cd_1, cd_2, cd_3, cd_4]
 
+@onready var hp_bar: TextureProgressBar = $HPBar
 @onready var cast_bar: TextureProgressBar = $CastBar
 @onready var error: Label = $Error
 
@@ -21,6 +24,9 @@ var cooldowns: Array[float] = [0.0, 0.0, 0.0, 0.0]
 func _ready() -> void:
 	cast_bar.hide()
 	error.hide()
+	
+	hp_bar.max_value = player.max_health
+	hp_bar.value = player.current_health
 
 	for label in cd_labels:
 		label.hide()

@@ -10,6 +10,7 @@
 [ext_resource type="Resource" uid="uid://dwtwsub62sgk7" path="res://Scripts/Resources/Skills/ranged_1.tres" id="5_pqmvb"]
 [ext_resource type="Resource" uid="uid://cajqe33brelka" path="res://Scripts/Resources/Skills/ranged_2.tres" id="6_gv2p0"]
 [ext_resource type="Script" uid="uid://3e7a6jakvex0" path="res://Scripts/Game/skill_handler.gd" id="10_jvdnu"]
+[ext_resource type="PackedScene" uid="uid://bmbyqnchenjky" path="res://_Scene/Entities/boss_1.tscn" id="11_dkdn0"]
 
 [sub_resource type="Environment" id="Environment_h8a0l"]
 background_mode = 2
@@ -26,6 +27,13 @@ bottom_radius = 20.0
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_sanrv"]
 radius = 20.0
 
+[sub_resource type="BoxShape3D" id="BoxShape3D_mxsx2"]
+size = Vector3(80, 5, 80)
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mxsx2"]
+height = 10.0
+radius = 12.0
+
 [node name="Boss1" type="Node3D" unique_id=824633023 node_paths=PackedStringArray("battle_ui")]
 script = ExtResource("1_weve7")
 debug = true
@@ -33,7 +41,7 @@ debug_skills = Array[ExtResource("2_jscby")]([ExtResource("3_jvdnu"), ExtResourc
 battle_ui = NodePath("BattleUI")
 
 [node name="Player" parent="." unique_id=730588806 instance=ExtResource("2_h8a0l")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99273944, 13.287739)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.99273944, 15.593525)
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="." unique_id=125920035]
 environment = SubResource("Environment_h8a0l")
@@ -49,9 +57,25 @@ mesh = SubResource("CylinderMesh_u5qm4")
 [node name="CollisionShape3D" type="CollisionShape3D" parent="StaticBody3D" unique_id=1428739883]
 shape = SubResource("CylinderShape3D_sanrv")
 
-[node name="BattleUI" parent="." unique_id=1684835331 instance=ExtResource("3_h8a0l")]
+[node name="BattleUI" parent="." unique_id=1684835331 node_paths=PackedStringArray("player") instance=ExtResource("3_h8a0l")]
+player = NodePath("../Player")
 
 [node name="SkillHandler" type="Node" parent="." unique_id=1157568229 node_paths=PackedStringArray("battle_ui")]
 script = ExtResource("10_jvdnu")
 battle_ui = NodePath("../BattleUI")
 cooldown_message = "Skill is on cooldown!"
+
+[node name="Death" type="Area3D" parent="." unique_id=1847067950]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Death" unique_id=1090408704]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -3.608181, 0)
+shape = SubResource("BoxShape3D_mxsx2")
+
+[node name="AggroRange" type="Area3D" parent="." unique_id=1284831956]
+input_ray_pickable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="AggroRange" unique_id=1028129266]
+shape = SubResource("CylinderShape3D_mxsx2")
+
+[node name="Boss1" parent="." unique_id=887136985 instance=ExtResource("11_dkdn0")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, 1, 1, -2)

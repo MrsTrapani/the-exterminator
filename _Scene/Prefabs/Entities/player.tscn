@@ -30,6 +30,7 @@
 [ext_resource type="Texture2D" uid="uid://on6uf7uwk4rb" path="res://Assets/2D/Entities/MC/R_Walk_4.png" id="28_i2lll"]
 [ext_resource type="Script" uid="uid://df2eswoe5kphj" path="res://Scripts/Entities/player_movement.gd" id="29_movement"]
 [ext_resource type="Texture2D" uid="uid://dny6h2xm3simw" path="res://Assets/2D/Entities/shadow.png" id="30_ww1br"]
+[ext_resource type="Texture2D" uid="uid://d08e811b8bgn8" path="res://Assets/2D/Icons/Gameplay/arrow_indicator.png" id="31_f0c7e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mxsx2"]
 animations = [{
@@ -218,6 +219,14 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -1.1590863)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.65, 0, -1.1590863)
 
 [node name="Sprite3D" type="Sprite3D" parent="." unique_id=2078357616]
-transform = Transform3D(0.5, 0, 0, 0, -2.1855694e-08, -0.5, 0, 0.5, -2.1855694e-08, 0, 0.01828146, 0)
+transform = Transform3D(0.3, 0, 0, 0, 1, 0, 0, 0, 0.2, 0, 0.01828146, 0)
 modulate = Color(1, 1, 1, 0.78431374)
+axis = 1
+billboard = 2
 texture = ExtResource("30_ww1br")
+
+[node name="RotationIndicator" type="Sprite3D" parent="." unique_id=831538514]
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.01, 0)
+modulate = Color(0.21568628, 1, 0.10980392, 0.78431374)
+axis = 1
+texture = ExtResource("31_f0c7e")

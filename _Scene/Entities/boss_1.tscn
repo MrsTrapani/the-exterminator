@@ -1,0 +1,70 @@
+[gd_scene format=3 uid="uid://bmbyqnchenjky"]
+
+[ext_resource type="Script" uid="uid://c6k776o1guf8f" path="res://Scripts/Entities/boss_1.gd" id="1_vik2e"]
+[ext_resource type="Texture2D" uid="uid://b8aiteynjp6w" path="res://Assets/2D/Entities/Boss_1/boss_1.png" id="1_vvhy0"]
+[ext_resource type="Texture2D" uid="uid://d08e811b8bgn8" path="res://Assets/2D/Icons/Gameplay/arrow_indicator.png" id="2_n18o5"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_mxsx2"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_vvhy0")
+}],
+"loop": 1,
+"name": &"default",
+"speed": 5.0
+}]
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_4t6qk"]
+height = 1.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_mxsx2"]
+radius = 4.0
+
+[sub_resource type="CylinderShape3D" id="CylinderShape3D_vik2e"]
+radius = 10.0
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mxsx2"]
+
+[node name="Boss1" type="CharacterBody3D" unique_id=887136985]
+input_ray_pickable = false
+script = ExtResource("1_vik2e")
+
+[node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1738729019]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.585545, 0)
+billboard = 2
+sprite_frames = SubResource("SpriteFrames_mxsx2")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=793039375]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5063076, 0)
+shape = SubResource("CylinderShape3D_4t6qk")
+
+[node name="RotationIndicator" type="Sprite3D" parent="." unique_id=805861858]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+visible = false
+modulate = Color(0.92941177, 0, 0, 0.78431374)
+axis = 1
+texture = ExtResource("2_n18o5")
+
+[node name="MeleeZone" type="Area3D" parent="." unique_id=685654315]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0240889, 0)
+input_ray_pickable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="MeleeZone" unique_id=701723834]
+shape = SubResource("CylinderShape3D_mxsx2")
+
+[node name="RangeZone" type="Area3D" parent="." unique_id=1442829098]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.0240889, 0)
+input_ray_pickable = false
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="RangeZone" unique_id=737523208]
+shape = SubResource("CylinderShape3D_vik2e")
+
+[node name="SelectionZone" type="Area3D" parent="." unique_id=1465851267]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="SelectionZone" unique_id=1311586162]
+transform = Transform3D(6, 0, 0, 0, 6, 0, 0, 0, 6, 0, 2.3205476, 0)
+shape = SubResource("BoxShape3D_mxsx2")
+
+[connection signal="mouse_entered" from="SelectionZone" to="." method="_on_selection_zone_mouse_entered"]
+[connection signal="mouse_exited" from="SelectionZone" to="." method="_on_selection_zone_mouse_exited"]
