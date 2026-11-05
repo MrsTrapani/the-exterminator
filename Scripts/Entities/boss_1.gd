@@ -4,8 +4,6 @@ extends CharacterBody3D
 @onready var animated_sprite_3d: AnimatedSprite3D = $AnimatedSprite3D
 
 
-var in_melee_range: bool = false
-var in_ranged_range: bool = false
 var is_selected: bool = false
 var can_be_selected: bool = false
 var player: Node3D

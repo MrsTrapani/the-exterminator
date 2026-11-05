@@ -24,8 +24,10 @@ func player_exited(body: Node3D) -> void:
 		interact_prompt.hide()
 
 func _input(event: InputEvent) -> void:
-	if not interacted and event.is_action_pressed("interact"):
+	if player != null and not interacted and event.is_action_pressed("interact"):
 		player.stop_camera_rotation()
 		player.can_move = false
+		interacted = true
+		interact_prompt.hide()
 		get_viewport().set_input_as_handled()
 		SignalHub.emit_loadout_requested(true)

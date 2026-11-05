@@ -27,8 +27,6 @@ func _ready() -> void:
 
 func _process(_delta: float) -> void:
 	var camera_forward := -camera.global_basis.z
-	# The floor indicator's arrow points along local +Z.
-	rotation_indicator.global_rotation.y = atan2(camera_forward.x, camera_forward.z)
 
 
 func _physics_process(delta: float) -> void:
@@ -78,22 +76,19 @@ func update_animation(input_dir: Vector2) -> void:
 	sprite.play(animation)
 
 
-func _unhandled_input(event: InputEvent) -> void:
-	if not can_move:
-		return
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_MIDDLE and event.pressed:
-		previous_mouse_mode = Input.mouse_mode
-		rotating_camera = true
-		Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+func _input(event: InputEvent) -> void:
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_MIDDLE:
+		if event.pressed and can_move:
+			previous_mouse_mode = Input.mouse_mode
+			rotating_camera = true
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED
+		else:
+			stop_camera_rotation()
 		get_viewport().set_input_as_handled()
 
-
-func _input(event: InputEvent) -> void:
-	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_MIDDLE and not event.pressed:
-		stop_camera_rotation()
 	elif event is InputEventMouseMotion and rotating_camera and can_move:
-		camera_pivot.rotation.y -= deg_to_rad(event.relative.x * camera_sensitivity)
-		camera_pivot.rotation.x -= deg_to_rad(event.relative.y * camera_sensitivity)
+		camera_pivot.rotation.y -= deg_to_rad(event.screen_relative.x * camera_sensitivity)
+		camera_pivot.rotation.x -= deg_to_rad(event.screen_relative.y * camera_sensitivity)
 		camera_pivot.rotation.x = clampf(camera_pivot.rotation.x, deg_to_rad(-30.0), deg_to_rad(-5.0))
 		get_viewport().set_input_as_handled()
 

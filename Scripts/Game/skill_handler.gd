@@ -3,6 +3,11 @@ extends Node
 @export var battle_ui: Control
 @export var cooldown_message: String
 
+var can_melee: bool = false
+var can_ranged: bool = false
+
+var skill_shift_type
+
 func _input(_event: InputEvent) -> void:
 	if Input.is_action_just_pressed("skill_shift"):
 		if battle_ui.cooldowns[0] > 0.0:
@@ -28,3 +33,22 @@ func _input(_event: InputEvent) -> void:
 			return
 		print((GameState.skills[3].skill_name), " activated")
 		battle_ui.start_skill_cooldown(3)
+
+
+func _on_melee_zone_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		can_melee = true
+
+func _on_melee_zone_body_exited(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		can_melee = false
+
+
+func _on_range_zone_body_entered(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		can_ranged = true
+
+
+func _on_range_zone_body_exited(body: Node3D) -> void:
+	if body.is_in_group("player"):
+		can_ranged = false

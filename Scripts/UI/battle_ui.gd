@@ -2,6 +2,8 @@ extends Control
 
 @export var player: CharacterBody3D
 
+@onready var tutorial: Control = $Tutorial
+
 @onready var icon_1: Control = $SkillBar/Icon
 @onready var icon_2: Control = $SkillBar/Icon2
 @onready var icon_3: Control = $SkillBar/Icon3
@@ -21,15 +23,22 @@ var error_triggered: bool = false
 
 var cooldowns: Array[float] = [0.0, 0.0, 0.0, 0.0]
 
+var battle_started: bool = false
+
 func _ready() -> void:
 	cast_bar.hide()
 	error.hide()
+	tutorial.hide()
 	
 	hp_bar.max_value = player.max_health
 	hp_bar.value = player.current_health
 
 	for label in cd_labels:
 		label.hide()
+	
+	if not GameState.boss_1_tutorial_seen:
+		player.can_move = false
+		tutorial.show()
 
 func _process(delta: float) -> void:
 	for i in range(4):
@@ -67,4 +76,13 @@ func update_error(message: String) -> void:
 		error.hide()
 		error.text = ""
 		error_triggered = false
-	
+
+func start_battle() -> void:
+	battle_started = true
+	print("Battle started!")
+
+
+func _on_proceed_button_pressed() -> void:
+	tutorial.hide()
+	GameState.boss_1_tutorial_seen = true
+	player.can_move = true

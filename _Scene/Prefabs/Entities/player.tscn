@@ -227,6 +227,8 @@ texture = ExtResource("30_ww1br")
 
 [node name="RotationIndicator" type="Sprite3D" parent="." unique_id=831538514]
 transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.01, 0)
+flip_v = true
 modulate = Color(0.21568628, 1, 0.10980392, 0.78431374)
 axis = 1
+billboard = 2
 texture = ExtResource("31_f0c7e")
