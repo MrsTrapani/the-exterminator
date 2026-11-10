@@ -1,0 +1,32 @@
+[gd_resource type="ShaderMaterial" format=3 uid="uid://bej3j7ay62e4a"]
+
+[ext_resource type="Shader" uid="uid://bkb1f7plk6r1j" path="res://Externals/Binbun/UltimateToon/assets/BinbunMaterials/src/shader/stylized.gdshader" id="1_1t5ew"]
+[ext_resource type="Texture2D" uid="uid://toek1dnailst" path="res://Assets/3D/Props/Texture/t_world_512.png" id="2_knrp2"]
+[ext_resource type="Texture2D" uid="uid://3phqmluuewrc" path="res://Externals/Binbun/BinbunVFX/shared/texture/noise/warp/warp_brush_02.tres" id="3_knrp2"]
+
+[resource]
+render_priority = 0
+shader = ExtResource("1_1t5ew")
+shader_parameter/albedo_color = Color(0.9981355, 0.7403049, 0.7082437, 1)
+shader_parameter/albedo_texture = ExtResource("2_knrp2")
+shader_parameter/albedo_affect = 0.0
+shader_parameter/use_stepped = false
+shader_parameter/steps = 3.0
+shader_parameter/step_smoothness = 0.5
+shader_parameter/shadow_tint = Color(0.3485, 0, 0.51, 1)
+shader_parameter/shadow_tint_amount = 1.0
+shader_parameter/specular = 0.0
+shader_parameter/normal_strength = 0.0
+shader_parameter/use_rim = true
+shader_parameter/rim_color = Color(1, 0.96, 0.88, 1)
+shader_parameter/rim_amount = 1.5
+shader_parameter/rim_smoothness = 0.5
+shader_parameter/rim_mask_shadow = 0.9
+shader_parameter/rim_blend = 1.0
+shader_parameter/use_pattern = true
+shader_parameter/pattern_texture = ExtResource("3_knrp2")
+shader_parameter/pattern_uv_mode = 0
+shader_parameter/pattern_tiling = 1.0
+shader_parameter/pattern_amount = 0.7500000111759
+shader_parameter/pattern_smoothness = 0.30000000447036
+shader_parameter/pattern_blend = 0.60000000894072

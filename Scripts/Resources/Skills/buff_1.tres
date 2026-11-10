@@ -7,6 +7,9 @@
 script = ExtResource("1_d28el")
 skill_name = "Second Wind"
 skill_icon = ExtResource("2_adcmy")
-skill_description = "Reset all your cooldown."
-skill_cooldown = 60.0
+skill_description = "Instantly reset the cooldowns of your other equipped skills. Does not reset its own cooldown."
+skill_cooldown = 60
 skill_range = 2
+skill_damage = 0
+cast_time = 0
+skill_effect = 2

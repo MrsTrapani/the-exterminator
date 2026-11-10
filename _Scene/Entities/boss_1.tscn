@@ -1,18 +1,90 @@
 [gd_scene format=3 uid="uid://bmbyqnchenjky"]
 
 [ext_resource type="Script" uid="uid://c6k776o1guf8f" path="res://Scripts/Entities/boss_1.gd" id="1_vik2e"]
-[ext_resource type="Texture2D" uid="uid://b8aiteynjp6w" path="res://Assets/2D/Entities/Boss_1/boss_1.png" id="1_vvhy0"]
+[ext_resource type="Texture2D" uid="uid://bqltgs8dxb5tb" path="res://Assets/2D/Entities/Boss_1/idle_1.png" id="2_12fxg"]
 [ext_resource type="Texture2D" uid="uid://d08e811b8bgn8" path="res://Assets/2D/Icons/Gameplay/arrow_indicator.png" id="2_n18o5"]
+[ext_resource type="Texture2D" uid="uid://du6e7b5xkuucb" path="res://Assets/2D/Entities/Boss_1/cast_1.png" id="2_skdxr"]
+[ext_resource type="Texture2D" uid="uid://cnarq4vlymv1o" path="res://Assets/2D/Entities/Boss_1/cast_2.png" id="3_5e7ci"]
+[ext_resource type="Texture2D" uid="uid://cd3uxood2xe6b" path="res://Assets/2D/Entities/Boss_1/idle_2.png" id="3_mrj1e"]
+[ext_resource type="Texture2D" uid="uid://ddxka3cja2d0x" path="res://Assets/2D/Entities/Boss_1/idle_3.png" id="4_eumxd"]
+[ext_resource type="Texture2D" uid="uid://cq45gw3db45ix" path="res://Assets/2D/Entities/Boss_1/cast_3.png" id="4_r2ge1"]
+[ext_resource type="Texture2D" uid="uid://cqr851f6bv3db" path="res://Assets/2D/Entities/Boss_1/cast_4.png" id="5_4eyoo"]
+[ext_resource type="Texture2D" uid="uid://bn2i3qid868o7" path="res://Assets/2D/Entities/Boss_1/idle_4.png" id="5_xk05q"]
+[ext_resource type="Texture2D" uid="uid://dxyq8nbsrhrh7" path="res://Assets/2D/Entities/Boss_1/idle_5.png" id="6_7hbja"]
+[ext_resource type="Texture2D" uid="uid://7jdq6m3umbgk" path="res://Assets/2D/Entities/Boss_1/cast_5.png" id="6_7iena"]
+[ext_resource type="Texture2D" uid="uid://ogjvroe7d2jj" path="res://Assets/2D/Entities/Boss_1/idle_6.png" id="7_7o5bu"]
+[ext_resource type="Texture2D" uid="uid://d3yqrp8pd484r" path="res://Assets/2D/Entities/Boss_1/cast_6.png" id="7_w7137"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mxsx2"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_vvhy0")
+"texture": ExtResource("2_skdxr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5e7ci")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r2ge1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4eyoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7iena")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_w7137")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7iena")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_4eyoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_r2ge1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5e7ci")
 }],
 "loop": 1,
-"name": &"default",
+"name": &"cast",
 "speed": 5.0
+}, {
+"frames": [],
+"loop": 1,
+"name": &"cast_idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_12fxg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_mrj1e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_eumxd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xk05q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7hbja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_7o5bu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_7hbja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_xk05q")
+}],
+"loop": 1,
+"name": &"idle",
+"speed": 4.0
 }]
 
 [sub_resource type="CylinderShape3D" id="CylinderShape3D_4t6qk"]
@@ -21,20 +93,24 @@ height = 1.0
 [sub_resource type="BoxShape3D" id="BoxShape3D_mxsx2"]
 
 [node name="Boss1" type="CharacterBody3D" unique_id=887136985]
+process_priority = 1
 input_ray_pickable = false
 script = ExtResource("1_vik2e")
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=1738729019]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.585545, 0)
+process_priority = 1
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.07097101, 1.8489742, 0)
 billboard = 2
 sprite_frames = SubResource("SpriteFrames_mxsx2")
+animation = &"idle"
+frame_progress = 0.25174284
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=793039375]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.5063076, 0)
 shape = SubResource("CylinderShape3D_4t6qk")
 
 [node name="RotationIndicator" type="Sprite3D" parent="." unique_id=805861858]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.01, 0)
+transform = Transform3D(1.5, 0, 0, 0, 1.5, 0, 0, 0, 1.5, 0, 0.01, 0)
 modulate = Color(0.92941177, 0, 0, 0.78431374)
 axis = 1
 texture = ExtResource("2_n18o5")

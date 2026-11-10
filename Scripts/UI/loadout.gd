@@ -1,5 +1,7 @@
 extends Control
 
+signal loadout_confirmed
+
 @onready var proceed_button: TextureButton = $ProceedButton
 @onready var skill_name: Label = $LoadoutBG/VBoxContainer2/SkillName
 @onready var skill_cd_num: Label = $LoadoutBG/VBoxContainer2/HBoxContainer/SkillCDNum
@@ -20,6 +22,15 @@ func _ready() -> void:
 	proceed_button.disabled = true
 	SignalHub.selected_skill.connect(update_button)
 	SignalHub.hovered_skill.connect(update_info)
+	proceed_button.pressed.connect(confirm_loadout)
+	update_button()
+
+func confirm_loadout() -> void:
+	if GameState.skills.size() != 4 or GameState.skills.has(null):
+		return
+	proceed_button.disabled = true
+	GameState.skill_selected = GameState.skills.size()
+	loadout_confirmed.emit()
 
 func update_button(_skill_resource: SkillResource = null) -> void:
 	if GameState.skills.size() < 4:
@@ -42,7 +53,10 @@ func update_info(skill_resource: SkillResource) -> void:
 		GameDictionary.AtkRange.RANGED:
 			skill_range = "Ranged"
 	
-	skill_cast_time.text = str(skill_resource.cast_time) + "s"
+	if skill_resource.cast_time == GameDictionary.CastTime.NONE:
+		skill_cast_time.text = "Instant"
+	else:
+		skill_cast_time.text = str(skill_resource.cast_time) + "s"
 	
 	skill_range_type.text = skill_range
 	

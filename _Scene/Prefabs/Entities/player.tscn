@@ -1,39 +1,72 @@
 [gd_scene format=3 uid="uid://jwprsyprrpye"]
 
-[ext_resource type="Texture2D" uid="uid://x8elgr24cvcs" path="res://Assets/2D/Entities/MC/B_Idle_1.png" id="1_p0o7a"]
-[ext_resource type="Texture2D" uid="uid://ptvux41j63lr" path="res://Assets/2D/Entities/MC/B_Idle_2.png" id="2_ryl0a"]
-[ext_resource type="Texture2D" uid="uid://dqs54jqsdrfeg" path="res://Assets/2D/Entities/MC/B_Idle_3.png" id="3_ww1br"]
-[ext_resource type="Texture2D" uid="uid://d3q4ipf60h67s" path="res://Assets/2D/Entities/MC/F_Idle_1.png" id="4_f0c7e"]
-[ext_resource type="Texture2D" uid="uid://4abpsf43bbdi" path="res://Assets/2D/Entities/MC/F_Idle_2.png" id="5_11p5y"]
-[ext_resource type="Texture2D" uid="uid://cromh26kqj55v" path="res://Assets/2D/Entities/MC/F_Idle_3.png" id="6_owsp0"]
-[ext_resource type="Texture2D" uid="uid://b1wb46yy4dytm" path="res://Assets/2D/Entities/MC/L_Idle_1.png" id="7_mcjte"]
-[ext_resource type="Texture2D" uid="uid://cqx53ik5h3wqj" path="res://Assets/2D/Entities/MC/L_Idle_2.png" id="8_rqjh4"]
-[ext_resource type="Texture2D" uid="uid://c0bjglrxdxfbj" path="res://Assets/2D/Entities/MC/L_Idle_3.png" id="9_xa40p"]
-[ext_resource type="Texture2D" uid="uid://bvs8ofg65boqg" path="res://Assets/2D/Entities/MC/R_Idle_1.png" id="10_cmvxd"]
-[ext_resource type="Texture2D" uid="uid://h6x0vgmsylie" path="res://Assets/2D/Entities/MC/R_Idle_2.png" id="11_j72wm"]
-[ext_resource type="Texture2D" uid="uid://ct4x7tk6miqum" path="res://Assets/2D/Entities/MC/R_Idle_3.png" id="12_k050b"]
-[ext_resource type="Texture2D" uid="uid://chdeechlmteod" path="res://Assets/2D/Entities/MC/B_Walk_1.png" id="13_k1ahn"]
-[ext_resource type="Texture2D" uid="uid://bv6yqppo8iorg" path="res://Assets/2D/Entities/MC/B_Walk_2.png" id="14_jdwis"]
-[ext_resource type="Texture2D" uid="uid://ckqfg3wj4dwmh" path="res://Assets/2D/Entities/MC/B_Walk_3.png" id="15_55vdp"]
-[ext_resource type="Texture2D" uid="uid://cahqjm5s10uet" path="res://Assets/2D/Entities/MC/B_Walk_4.png" id="16_07e0h"]
-[ext_resource type="Texture2D" uid="uid://kto0mdjltbi6" path="res://Assets/2D/Entities/MC/F_Walk_1.png" id="17_whbfq"]
-[ext_resource type="Texture2D" uid="uid://bwbai8vtohf7p" path="res://Assets/2D/Entities/MC/F_Walk_2.png" id="18_wi1o0"]
-[ext_resource type="Texture2D" uid="uid://bk3rlm6uxvqxp" path="res://Assets/2D/Entities/MC/F_Walk_3.png" id="19_mqpu5"]
-[ext_resource type="Texture2D" uid="uid://f2uxnhunuk62" path="res://Assets/2D/Entities/MC/F_Walk_4.png" id="20_5vsx7"]
-[ext_resource type="Texture2D" uid="uid://cosapglwlmh3p" path="res://Assets/2D/Entities/MC/L_Walk_1.png" id="21_q1ebp"]
-[ext_resource type="Texture2D" uid="uid://bnayr11wekp13" path="res://Assets/2D/Entities/MC/L_Walk_2.png" id="22_cpu32"]
-[ext_resource type="Texture2D" uid="uid://bgpipgf6l85dk" path="res://Assets/2D/Entities/MC/L_Walk_3.png" id="23_p13j7"]
-[ext_resource type="Texture2D" uid="uid://donesy8tn6dyd" path="res://Assets/2D/Entities/MC/L_Walk_4.png" id="24_oiw5a"]
-[ext_resource type="Texture2D" uid="uid://c0exnir8ubyra" path="res://Assets/2D/Entities/MC/R_Walk_1.png" id="25_o3qpv"]
-[ext_resource type="Texture2D" uid="uid://bmlbn0hwr0c6p" path="res://Assets/2D/Entities/MC/R_Walk_2.png" id="26_6gfrf"]
-[ext_resource type="Texture2D" uid="uid://b0eufb35esv6p" path="res://Assets/2D/Entities/MC/R_Walk_3.png" id="27_ryjkr"]
-[ext_resource type="Texture2D" uid="uid://on6uf7uwk4rb" path="res://Assets/2D/Entities/MC/R_Walk_4.png" id="28_i2lll"]
+[ext_resource type="Texture2D" uid="uid://x8elgr24cvcs" path="res://Assets/2D/Entities/MC/Back/B_Idle_1.png" id="1_p0o7a"]
+[ext_resource type="Texture2D" uid="uid://vnfvayrhcyra" path="res://Assets/2D/Entities/MC/Front/f_cast_1.png" id="2_j72wm"]
+[ext_resource type="Texture2D" uid="uid://ptvux41j63lr" path="res://Assets/2D/Entities/MC/Back/B_Idle_2.png" id="2_ryl0a"]
+[ext_resource type="Texture2D" uid="uid://s6674e4kdkwt" path="res://Assets/2D/Entities/MC/Front/f_cast_2.png" id="3_k050b"]
+[ext_resource type="Texture2D" uid="uid://dqs54jqsdrfeg" path="res://Assets/2D/Entities/MC/Back/B_Idle_3.png" id="3_ww1br"]
+[ext_resource type="Texture2D" uid="uid://d3q4ipf60h67s" path="res://Assets/2D/Entities/MC/Front/F_Idle_1.png" id="4_f0c7e"]
+[ext_resource type="Texture2D" uid="uid://dwaefpllfepuf" path="res://Assets/2D/Entities/MC/Front/f_cast_3.png" id="4_k1ahn"]
+[ext_resource type="Texture2D" uid="uid://4abpsf43bbdi" path="res://Assets/2D/Entities/MC/Front/F_Idle_2.png" id="5_11p5y"]
+[ext_resource type="Texture2D" uid="uid://dv6ytimobyj5y" path="res://Assets/2D/Entities/MC/Front/f_cast_4.png" id="5_jdwis"]
+[ext_resource type="Texture2D" uid="uid://d07fe4hlvstgr" path="res://Assets/2D/Entities/MC/Front/f_cast_5.png" id="6_55vdp"]
+[ext_resource type="Texture2D" uid="uid://cromh26kqj55v" path="res://Assets/2D/Entities/MC/Front/F_Idle_3.png" id="6_owsp0"]
+[ext_resource type="Texture2D" uid="uid://d3ee2d05j5ce2" path="res://Assets/2D/Entities/MC/Front/f_cast_6.png" id="7_07e0h"]
+[ext_resource type="Texture2D" uid="uid://b1wb46yy4dytm" path="res://Assets/2D/Entities/MC/Left/L_Idle_1.png" id="7_mcjte"]
+[ext_resource type="Texture2D" uid="uid://cqx53ik5h3wqj" path="res://Assets/2D/Entities/MC/Left/L_Idle_2.png" id="8_rqjh4"]
+[ext_resource type="Texture2D" uid="uid://btguk2im25evf" path="res://Assets/2D/Entities/MC/Front/f_cast_7.png" id="8_whbfq"]
+[ext_resource type="Texture2D" uid="uid://c0bjglrxdxfbj" path="res://Assets/2D/Entities/MC/Left/L_Idle_3.png" id="9_xa40p"]
+[ext_resource type="Texture2D" uid="uid://bvs8ofg65boqg" path="res://Assets/2D/Entities/MC/Right/R_Idle_1.png" id="10_cmvxd"]
+[ext_resource type="Texture2D" uid="uid://h6x0vgmsylie" path="res://Assets/2D/Entities/MC/Right/R_Idle_2.png" id="11_j72wm"]
+[ext_resource type="Texture2D" uid="uid://ct4x7tk6miqum" path="res://Assets/2D/Entities/MC/Right/R_Idle_3.png" id="12_k050b"]
+[ext_resource type="Texture2D" uid="uid://chdeechlmteod" path="res://Assets/2D/Entities/MC/Back/B_Walk_1.png" id="13_k1ahn"]
+[ext_resource type="Texture2D" uid="uid://bv6yqppo8iorg" path="res://Assets/2D/Entities/MC/Back/B_Walk_2.png" id="14_jdwis"]
+[ext_resource type="Texture2D" uid="uid://ckqfg3wj4dwmh" path="res://Assets/2D/Entities/MC/Back/B_Walk_3.png" id="15_55vdp"]
+[ext_resource type="Texture2D" uid="uid://cahqjm5s10uet" path="res://Assets/2D/Entities/MC/Back/B_Walk_4.png" id="16_07e0h"]
+[ext_resource type="Texture2D" uid="uid://kto0mdjltbi6" path="res://Assets/2D/Entities/MC/Front/F_Walk_1.png" id="17_whbfq"]
+[ext_resource type="Texture2D" uid="uid://bwbai8vtohf7p" path="res://Assets/2D/Entities/MC/Front/F_Walk_2.png" id="18_wi1o0"]
+[ext_resource type="Texture2D" uid="uid://bk3rlm6uxvqxp" path="res://Assets/2D/Entities/MC/Front/F_Walk_3.png" id="19_mqpu5"]
+[ext_resource type="Texture2D" uid="uid://f2uxnhunuk62" path="res://Assets/2D/Entities/MC/Front/F_Walk_4.png" id="20_5vsx7"]
+[ext_resource type="Texture2D" uid="uid://cosapglwlmh3p" path="res://Assets/2D/Entities/MC/Left/L_Walk_1.png" id="21_q1ebp"]
+[ext_resource type="Texture2D" uid="uid://bnayr11wekp13" path="res://Assets/2D/Entities/MC/Left/L_Walk_2.png" id="22_cpu32"]
+[ext_resource type="Texture2D" uid="uid://bgpipgf6l85dk" path="res://Assets/2D/Entities/MC/Left/L_Walk_3.png" id="23_p13j7"]
+[ext_resource type="Texture2D" uid="uid://donesy8tn6dyd" path="res://Assets/2D/Entities/MC/Left/L_Walk_4.png" id="24_oiw5a"]
+[ext_resource type="Texture2D" uid="uid://c0exnir8ubyra" path="res://Assets/2D/Entities/MC/Right/R_Walk_1.png" id="25_o3qpv"]
+[ext_resource type="Texture2D" uid="uid://bmlbn0hwr0c6p" path="res://Assets/2D/Entities/MC/Right/R_Walk_2.png" id="26_6gfrf"]
+[ext_resource type="Texture2D" uid="uid://b0eufb35esv6p" path="res://Assets/2D/Entities/MC/Right/R_Walk_3.png" id="27_ryjkr"]
+[ext_resource type="Texture2D" uid="uid://on6uf7uwk4rb" path="res://Assets/2D/Entities/MC/Right/R_Walk_4.png" id="28_i2lll"]
 [ext_resource type="Script" uid="uid://df2eswoe5kphj" path="res://Scripts/Entities/player_movement.gd" id="29_movement"]
 [ext_resource type="Texture2D" uid="uid://dny6h2xm3simw" path="res://Assets/2D/Entities/shadow.png" id="30_ww1br"]
 [ext_resource type="Texture2D" uid="uid://d08e811b8bgn8" path="res://Assets/2D/Icons/Gameplay/arrow_indicator.png" id="31_f0c7e"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_mxsx2"]
 animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_j72wm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_k050b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_k1ahn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_jdwis")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_55vdp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_07e0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_whbfq")
+}],
+"loop": 1,
+"name": &"Cast_F",
+"speed": 5.0
+}, {
 "frames": [{
 "duration": 1.0,
 "texture": ExtResource("1_p0o7a")
@@ -188,6 +221,7 @@ size = Vector3(1.5521698, 3.095459, 1)
 
 [node name="Player" type="CharacterBody3D" unique_id=730588806 groups=["player"]]
 script = ExtResource("29_movement")
+max_health = 1000.0
 
 [node name="AnimatedSprite3D" type="AnimatedSprite3D" parent="." unique_id=487073574]
 transform = Transform3D(0.4, 0, 0, 0, 0.4, 0, 0, 0, 0.4, 0, 0.92889214, 0)
@@ -195,7 +229,8 @@ billboard = 2
 shaded = true
 alpha_cut = 1
 sprite_frames = SubResource("SpriteFrames_mxsx2")
-animation = &"Idle_F"
+animation = &"Cast_F"
+frame_progress = 0.14942414
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="." unique_id=1428352168]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.054618835, 0.78294444, 0)
@@ -208,6 +243,7 @@ transform = Transform3D(1, 0, 0, 0, 0.9659258, 0.25881904, 0, -0.25881904, 0.965
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 7.746975)
 current = true
 fov = 60.0
+near = 0.2
 
 [node name="UpgradeSpawn1" type="Marker3D" parent="CameraPivot/Camera3D" unique_id=1786011782]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.65, 0, -1.1590863)
@@ -226,7 +262,7 @@ billboard = 2
 texture = ExtResource("30_ww1br")
 
 [node name="RotationIndicator" type="Sprite3D" parent="." unique_id=831538514]
-transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.01, 0)
+transform = Transform3D(0.3, 0, 0, 0, 0.3, 0, 0, 0, 0.3, 0, 0.043447264, 0)
 flip_v = true
 modulate = Color(0.21568628, 1, 0.10980392, 0.78431374)
 axis = 1

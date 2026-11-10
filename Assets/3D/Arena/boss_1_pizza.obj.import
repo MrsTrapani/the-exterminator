@@ -1,0 +1,25 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://b67td0nya0vve"
+path="res://.godot/imported/boss_1_pizza.obj-208268d6ff22bb61c826acd098586aee.mesh"
+
+[deps]
+
+files=["res://.godot/imported/boss_1_pizza.obj-208268d6ff22bb61c826acd098586aee.mesh"]
+
+source_file="res://Assets/3D/Arena/boss_1_pizza.obj"
+dest_files=["res://.godot/imported/boss_1_pizza.obj-208268d6ff22bb61c826acd098586aee.mesh", "res://.godot/imported/boss_1_pizza.obj-208268d6ff22bb61c826acd098586aee.mesh"]
+
+[params]
+
+generate_tangents=true
+generate_lods=true
+generate_shadow_mesh=true
+generate_lightmap_uv2=false
+generate_lightmap_uv2_texel_size=0.2
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+force_disable_mesh_compression=false

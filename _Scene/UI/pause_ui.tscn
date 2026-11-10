@@ -1,0 +1,533 @@
+[gd_scene format=3 uid="uid://c12vsu2o2x872"]
+
+[ext_resource type="Texture2D" uid="uid://bbx57gnivvrfa" path="res://Assets/2D/UI/Screentone/loadout_screentone.png" id="1_jtlq3"]
+[ext_resource type="Texture2D" uid="uid://btxpkv88b33mm" path="res://Assets/2D/UI/Card/loadout_parchment.png" id="2_e4qyn"]
+[ext_resource type="FontFile" uid="uid://dw21cnk7vpkf" path="res://Assets/Font/BorderWall.otf" id="3_f7pl0"]
+[ext_resource type="Texture2D" uid="uid://dc2ccq5f5lpk2" path="res://Assets/2D/Guides/boss1_guide.png" id="4_e4qyn"]
+[ext_resource type="Texture2D" uid="uid://b85tqukpifgt8" path="res://Assets/2D/UI/Button/Artboard 32.png" id="5_2c2ox"]
+[ext_resource type="Texture2D" uid="uid://fv7wy7ks75ou" path="res://Assets/2D/UI/Button/arrow2.png" id="5_bkwko"]
+[ext_resource type="Texture2D" uid="uid://qfojwtsg8kxj" path="res://Assets/2D/UI/Button/arrow.png" id="5_lqgjs"]
+[ext_resource type="Texture2D" uid="uid://c3a78nja07sxs" path="res://Assets/2D/UI/Button/Artboard 32 copy 2.png" id="6_lqgjs"]
+[ext_resource type="Texture2D" uid="uid://c1up2d1macqgv" path="res://Assets/2D/UI/Button/Artboard 32 copy.png" id="7_vwg4k"]
+[ext_resource type="Script" uid="uid://b1mipqcd4ppn0" path="res://Scripts/UI/pause_ui.gd" id="9_pause"]
+
+[node name="PauseUI" type="Control" unique_id=1508273143]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("9_pause")
+
+[node name="Screentone" type="TextureRect" parent="." unique_id=1692958513]
+modulate = Color(1, 1, 1, 0.5882353)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_jtlq3")
+expand_mode = 1
+
+[node name="ColorRect" type="TextureRect" parent="." unique_id=1903585974]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -750.0
+offset_top = -477.0
+offset_right = 750.0
+offset_bottom = 323.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_e4qyn")
+
+[node name="Guide" type="Control" parent="." unique_id=1088787243]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Next" type="TextureButton" parent="Guide" unique_id=2011935933]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -501.0
+offset_top = -147.0
+offset_right = -291.07825
+offset_bottom = -25.0
+grow_horizontal = 0
+grow_vertical = 2
+texture_normal = ExtResource("5_lqgjs")
+texture_pressed = ExtResource("5_bkwko")
+texture_hover = ExtResource("5_bkwko")
+texture_disabled = ExtResource("5_lqgjs")
+texture_focused = ExtResource("5_lqgjs")
+ignore_texture_size = true
+stretch_mode = 4
+
+[node name="Back" type="TextureButton" parent="Guide" unique_id=1050717430]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 280.0
+offset_top = -146.0
+offset_right = 489.92175
+offset_bottom = -24.0
+grow_vertical = 2
+texture_normal = ExtResource("5_lqgjs")
+texture_pressed = ExtResource("5_bkwko")
+texture_hover = ExtResource("5_bkwko")
+texture_disabled = ExtResource("5_lqgjs")
+texture_focused = ExtResource("5_lqgjs")
+ignore_texture_size = true
+stretch_mode = 4
+flip_h = true
+
+[node name="RingtoneGuide" type="VBoxContainer" parent="Guide" unique_id=575217910]
+custom_maximum_size = Vector2(950, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 485.0
+offset_top = 186.0
+offset_right = -485.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tute1" type="Label" parent="Guide/RingtoneGuide" unique_id=1163785557]
+custom_minimum_size = Vector2(950, 0)
+layout_mode = 2
+size_flags_horizontal = 5
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 55
+text = "Ringtone / Reverse Ringtone"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Tute2" type="Label" parent="Guide/RingtoneGuide" unique_id=2093225947]
+custom_minimum_size = Vector2(950, 0)
+layout_mode = 2
+size_flags_horizontal = 5
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.4509804)
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 40
+text = "Creates a circle/donut AoE around the boss."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Guide/RingtoneGuide" unique_id=2014105819]
+position = Vector2(256.84998, 355.7)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_e4qyn")
+region_enabled = true
+region_rect = Rect2(1381, 1, 1319, 1318)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Guide/RingtoneGuide" unique_id=1139372453]
+position = Vector2(699.69995, 355.7)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("4_e4qyn")
+region_enabled = true
+region_rect = Rect2(2762, 1, 1318, 1318)
+
+[node name="HourStrikeGuide" type="VBoxContainer" parent="Guide" unique_id=1242467491]
+visible = false
+custom_maximum_size = Vector2(950, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 485.0
+offset_top = 182.0
+offset_right = -485.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tute1" type="Label" parent="Guide/HourStrikeGuide" unique_id=1511501618]
+custom_minimum_size = Vector2(950, 0)
+layout_mode = 2
+size_flags_horizontal = 5
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 55
+text = "Hour Strike"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Tute2" type="Label" parent="Guide/HourStrikeGuide" unique_id=1795299806]
+custom_minimum_size = Vector2(950, 0)
+layout_mode = 2
+size_flags_horizontal = 5
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.4509804)
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 40
+text = "Hour hand appears. It will select number 3 (III) - 8 (XIII) at random and blows up segment I up to the selected number."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Guide/HourStrikeGuide" unique_id=726071361]
+position = Vector2(482.85007, 425)
+scale = Vector2(0.2628225, 0.26282248)
+texture = ExtResource("4_e4qyn")
+region_enabled = true
+region_rect = Rect2(1, 2, 1318, 1316)
+
+[node name="QuarterChimeGuide" type="VBoxContainer" parent="Guide" unique_id=1089065916]
+visible = false
+custom_maximum_size = Vector2(950, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 485.0
+offset_top = 182.0
+offset_right = -485.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tute1" type="Label" parent="Guide/QuarterChimeGuide" unique_id=36231994]
+custom_minimum_size = Vector2(950, 0)
+layout_mode = 2
+size_flags_horizontal = 5
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 55
+text = "Quarter Chime"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Tute2" type="Label" parent="Guide/QuarterChimeGuide" unique_id=56965818]
+custom_minimum_size = Vector2(950, 0)
+layout_mode = 2
+size_flags_horizontal = 5
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.4509804)
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 40
+text = "All but 3 quadrants will be safe. Look for the light orange numbers."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Guide/QuarterChimeGuide" unique_id=1016123334]
+position = Vector2(482.85007, 390)
+scale = Vector2(0.2628225, 0.26282248)
+texture = ExtResource("4_e4qyn")
+region_enabled = true
+region_rect = Rect2(4143, 2, 1318, 1316)
+
+[node name="RHSGuide" type="VBoxContainer" parent="Guide" unique_id=620301287]
+visible = false
+custom_maximum_size = Vector2(950, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 485.0
+offset_top = 182.0
+offset_right = -485.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tute1" type="Label" parent="Guide/RHSGuide" unique_id=152457588]
+custom_minimum_size = Vector2(950, 0)
+layout_mode = 2
+size_flags_horizontal = 5
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 55
+text = "Ringing Hour Strike / Reverse"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Tute2" type="Label" parent="Guide/RHSGuide" unique_id=1630127244]
+custom_minimum_size = Vector2(950, 0)
+layout_mode = 2
+size_flags_horizontal = 5
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.4509804)
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 40
+text = "Combines Ringtone/Reverse Ringtone and Hour Strike. Always watch out for segment I to track the hour hand."
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Guide/RHSGuide" unique_id=1008513420]
+position = Vector2(256.84998, 382.93)
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("4_e4qyn")
+region_enabled = true
+region_rect = Rect2(1, 1358, 1318, 1317)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Guide/RHSGuide" unique_id=737385764]
+position = Vector2(699.69995, 382.93)
+scale = Vector2(0.27, 0.27)
+texture = ExtResource("4_e4qyn")
+region_enabled = true
+region_rect = Rect2(1381, 1358, 1318, 1317)
+
+[node name="RavenousGuide" type="VBoxContainer" parent="Guide" unique_id=1714547418]
+visible = false
+custom_maximum_size = Vector2(950, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 485.0
+offset_top = 182.0
+offset_right = -485.0
+offset_bottom = -33.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Tute1" type="Label" parent="Guide/RavenousGuide" unique_id=1535039390]
+custom_minimum_size = Vector2(950, 0)
+layout_mode = 2
+size_flags_horizontal = 5
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 55
+text = "Ravenous Midnight / Reverse"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Tute2" type="Label" parent="Guide/RavenousGuide" unique_id=1856679708]
+custom_minimum_size = Vector2(950, 0)
+layout_mode = 2
+size_flags_horizontal = 5
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 0.4509804)
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 40
+text = "Combines all the mechanic you've learned. Watch for Segment I, determine if it's normal or reverse variant, and look for the safe quadrant!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="Sprite2D" type="Sprite2D" parent="Guide/RavenousGuide" unique_id=908755446]
+position = Vector2(256.85, 415.03998)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("4_e4qyn")
+region_enabled = true
+region_rect = Rect2(2762, 1358, 1318, 1317)
+
+[node name="Sprite2D2" type="Sprite2D" parent="Guide/RavenousGuide" unique_id=913145056]
+position = Vector2(699.69995, 415.03998)
+scale = Vector2(0.24, 0.24)
+texture = ExtResource("4_e4qyn")
+region_enabled = true
+region_rect = Rect2(4143, 1358, 1318, 1317)
+
+[node name="ResumeButton" type="TextureButton" parent="Guide" unique_id=1434274676]
+custom_minimum_size = Vector2(500, 100)
+custom_maximum_size = Vector2(-1, 100)
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -250.0
+offset_top = -290.0
+offset_right = 250.0
+offset_bottom = -190.0
+grow_horizontal = 2
+grow_vertical = 0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_2c2ox")
+texture_pressed = ExtResource("6_lqgjs")
+texture_hover = ExtResource("6_lqgjs")
+texture_disabled = ExtResource("7_vwg4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Guide/ResumeButton" unique_id=508806360]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.5
+offset_top = -65.0
+offset_right = 228.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.30980393, 0.011764706, 0.050980393, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 60
+text = "Resume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pause" type="Control" parent="." unique_id=1907832694]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PauseMenu" type="VBoxContainer" parent="Pause" unique_id=633449651]
+custom_maximum_size = Vector2(950, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 485.0
+offset_top = 186.0
+offset_right = -485.0
+offset_bottom = -291.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Tute1" type="Label" parent="Pause/PauseMenu" unique_id=696054565]
+custom_minimum_size = Vector2(950, 0)
+layout_mode = 2
+size_flags_horizontal = 5
+theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 55
+text = "Battle Paused!
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="ResumeButton" type="TextureButton" parent="Pause/PauseMenu" unique_id=1503986432]
+custom_minimum_size = Vector2(500, 100)
+custom_maximum_size = Vector2(-1, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_2c2ox")
+texture_pressed = ExtResource("6_lqgjs")
+texture_hover = ExtResource("6_lqgjs")
+texture_disabled = ExtResource("7_vwg4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Pause/PauseMenu/ResumeButton" unique_id=218447455]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.5
+offset_top = -65.0
+offset_right = 228.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.30980393, 0.011764706, 0.050980393, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 60
+text = "Resume"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GuideButton" type="TextureButton" parent="Pause/PauseMenu" unique_id=997055530]
+custom_minimum_size = Vector2(500, 100)
+custom_maximum_size = Vector2(-1, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_2c2ox")
+texture_pressed = ExtResource("6_lqgjs")
+texture_hover = ExtResource("6_lqgjs")
+texture_disabled = ExtResource("7_vwg4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Pause/PauseMenu/GuideButton" unique_id=1734135808]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.5
+offset_top = -65.0
+offset_right = 228.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.30980393, 0.011764706, 0.050980393, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 60
+text = "Guide"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="RestartButton" type="TextureButton" parent="Pause/PauseMenu" unique_id=127991037]
+custom_minimum_size = Vector2(500, 100)
+custom_maximum_size = Vector2(-1, 100)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture_normal = ExtResource("5_2c2ox")
+texture_pressed = ExtResource("6_lqgjs")
+texture_hover = ExtResource("6_lqgjs")
+texture_disabled = ExtResource("7_vwg4k")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Label" type="Label" parent="Pause/PauseMenu/RestartButton" unique_id=1689075804]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -228.5
+offset_top = -65.0
+offset_right = 228.5
+offset_bottom = 62.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.30980393, 0.011764706, 0.050980393, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 15
+theme_override_fonts/font = ExtResource("3_f7pl0")
+theme_override_font_sizes/font_size = 60
+text = "Restart"
+horizontal_alignment = 1
+vertical_alignment = 1

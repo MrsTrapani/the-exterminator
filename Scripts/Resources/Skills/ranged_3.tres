@@ -5,9 +5,13 @@
 
 [resource]
 script = ExtResource("1_mnd86")
-skill_name = "Attuned"
+skill_name = "Lingering Spark"
 skill_icon = ExtResource("2_6sb8t")
-skill_description = "Increases your auto"
-skill_damage = 50.0
-skill_cooldown = 3.0
+skill_description = "Instantly afflict your target, dealing 35 damage every second for 6 seconds. Reapplying refreshes the duration instead of stacking."
+skill_damage = 35
+skill_cooldown = 10
 skill_range = 1
+cast_time = 0
+skill_effect = 1
+effect_duration = 6
+tick_interval = 1

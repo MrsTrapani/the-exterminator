@@ -267,7 +267,7 @@ custom_maximum_size = Vector2(300, -1)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
 theme_override_fonts/font = ExtResource("20_rehmd")
-theme_override_font_sizes/font_size = 55
+theme_override_font_sizes/font_size = 40
 text = "[SkillName]"
 autowrap_mode = 2
 
@@ -281,7 +281,7 @@ custom_maximum_size = Vector2(150, 50)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
 theme_override_fonts/font = ExtResource("20_rehmd")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "Cooldown:"
 autowrap_mode = 2
 
@@ -289,7 +289,7 @@ autowrap_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
 theme_override_fonts/font = ExtResource("20_rehmd")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "[0s]"
 
 [node name="HBoxContainer2" type="HBoxContainer" parent="LoadoutBG/VBoxContainer2" unique_id=2013137665]
@@ -302,7 +302,7 @@ custom_maximum_size = Vector2(150, -1)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
 theme_override_fonts/font = ExtResource("20_rehmd")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "Range:"
 autowrap_mode = 2
 
@@ -310,7 +310,7 @@ autowrap_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
 theme_override_fonts/font = ExtResource("20_rehmd")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "[0s]"
 
 [node name="HBoxContainer3" type="HBoxContainer" parent="LoadoutBG/VBoxContainer2" unique_id=947687987]
@@ -323,7 +323,7 @@ custom_maximum_size = Vector2(150, -1)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
 theme_override_fonts/font = ExtResource("20_rehmd")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "Cast time:"
 autowrap_mode = 2
 
@@ -331,7 +331,7 @@ autowrap_mode = 2
 layout_mode = 2
 theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
 theme_override_fonts/font = ExtResource("20_rehmd")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "[0s]"
 
 [node name="Blank" type="Label" parent="LoadoutBG/VBoxContainer2" unique_id=769603824]
@@ -346,7 +346,7 @@ custom_maximum_size = Vector2(315, -1)
 layout_mode = 2
 theme_override_colors/font_color = Color(0.50980395, 0.18039216, 0.1764706, 1)
 theme_override_fonts/font = ExtResource("20_rehmd")
-theme_override_font_sizes/font_size = 30
+theme_override_font_sizes/font_size = 25
 text = "[SkillDescription]"
 autowrap_mode = 2
 

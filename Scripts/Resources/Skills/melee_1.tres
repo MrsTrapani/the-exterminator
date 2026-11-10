@@ -5,7 +5,8 @@
 
 [resource]
 script = ExtResource("1_4eikg")
-skill_name = "Rage"
+skill_name = "Quick Slash"
 skill_icon = ExtResource("2_gfy2t")
-skill_description = "Double your attack speed for 5 seconds."
-skill_cooldown = 10.0
+skill_description = "Instantly deal 50 damage to your target in melee range."
+skill_damage = 50
+skill_cooldown = 1

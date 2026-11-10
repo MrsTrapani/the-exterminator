@@ -5,9 +5,11 @@
 
 [resource]
 script = ExtResource("1_c37ee")
-skill_name = "En Garde!"
+skill_name = "Arcane Cleave"
 skill_icon = ExtResource("2_5jl2x")
-skill_description = "Rush towards your target and deal light damage."
-skill_damage = 50.0
-skill_cooldown = 5.0
-skill_range = 1
+skill_description = "Instantly deal 170 damage to your target in melee range."
+skill_damage = 170
+skill_cooldown = 5
+skill_range = 0
+cast_time = 0
+skill_effect = 0

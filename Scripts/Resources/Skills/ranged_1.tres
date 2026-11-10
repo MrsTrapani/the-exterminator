@@ -7,8 +7,8 @@
 script = ExtResource("1_ov3fa")
 skill_name = "Arcane Bolt"
 skill_icon = ExtResource("2_nbc0r")
-skill_description = "Deal medium damage to one enemy."
-skill_damage = 150.0
-skill_cooldown = 3.0
+skill_description = "Cast for 1 second to deal 230 damage to your target at range. Moving or jumping interrupts the cast."
+skill_damage = 230
+skill_cooldown = 3
 skill_range = 1
 cast_time = 1

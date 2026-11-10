@@ -1,0 +1,7 @@
+[gd_resource type="Resource" script_class="BattleResource" format=3 uid="uid://bwcqid3kayehn"]
+
+[ext_resource type="Script" uid="uid://claajknwaa753" path="res://Scripts/Resources/battle_resource.gd" id="1_wra7f"]
+
+[resource]
+script = ExtResource("1_wra7f")
+line = Array[String](["002,MinutesBygone", "010,Ringtone", "018,HourStrike", "032,QuarterChime", "043,Overclock", "049,QuarterChime", "060,ReverseRingtone", "068,RingingHourStrike", "088,Overclock", "094,ReversedRingingHourStrike", "115,ReverseRingtone", "123,RavenousMidnightChime", "144,ReversedRavenousMidnightChime", "165,OverclockedQuarterChime", "179,Ringtone", "187,RingingHourStrike", "208,OverclockedQuarterChime", "222,ReversedRingingHourStrike", "243,RavenousMidnightChime", "264,ReverseRingtone", "272,FinalChime"])

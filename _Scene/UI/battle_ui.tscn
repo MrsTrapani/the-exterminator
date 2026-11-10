@@ -15,6 +15,10 @@
 [ext_resource type="Texture2D" uid="uid://b85tqukpifgt8" path="res://Assets/2D/UI/Button/Artboard 32.png" id="12_owqp5"]
 [ext_resource type="Texture2D" uid="uid://c3a78nja07sxs" path="res://Assets/2D/UI/Button/Artboard 32 copy 2.png" id="13_5lv44"]
 [ext_resource type="Texture2D" uid="uid://c1up2d1macqgv" path="res://Assets/2D/UI/Button/Artboard 32 copy.png" id="14_ldc1w"]
+[ext_resource type="Texture2D" uid="uid://dhjqog3v4o4es" path="res://Assets/2D/UI/Bar/Artboard 42.png" id="16_ldc1w"]
+[ext_resource type="Texture2D" uid="uid://brtlqv1vqfcvs" path="res://Assets/2D/UI/Speech/speech_bubble_1.png" id="17_v6811"]
+[ext_resource type="Texture2D" uid="uid://bqltgs8dxb5tb" path="res://Assets/2D/Entities/Boss_1/idle_1.png" id="18_duki4"]
+[ext_resource type="Texture2D" uid="uid://53i1au6o5x1b" path="res://Assets/2D/Icons/Skills/SkillBorder.png" id="19_duki4"]
 
 [node name="BattleUI" type="Control" unique_id=1684835331]
 layout_mode = 3
@@ -33,12 +37,13 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -330.0
-offset_top = -200.0
-offset_right = 330.0
-offset_bottom = -50.0
+offset_left = -260.99994
+offset_top = -148.0
+offset_right = 399.0
+offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 0
+scale = Vector2(0.8, 0.8)
 theme_override_constants/separation = 20
 
 [node name="Icon" parent="SkillBar" unique_id=941943084 instance=ExtResource("1_c6eje")]
@@ -211,10 +216,10 @@ anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -646.00006
-offset_top = -327.0
-offset_right = 652.0
-offset_bottom = -161.0
+offset_left = -86.400024
+offset_top = -145.79999
+offset_right = 1211.6001
+offset_bottom = 20.199951
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.4, 0.4)
@@ -225,17 +230,16 @@ texture_progress = ExtResource("7_m4o2x")
 texture_progress_offset = Vector2(8, 8)
 
 [node name="CastBar" type="TextureProgressBar" parent="." unique_id=1080237937]
-visible = false
 layout_mode = 1
 anchors_preset = 7
 anchor_left = 0.5
 anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
-offset_left = -646.00006
-offset_top = -385.0
-offset_right = 652.0
-offset_bottom = -219.0
+offset_left = -86.400024
+offset_top = -203.79999
+offset_right = 1211.6001
+offset_bottom = -37.80005
 grow_horizontal = 2
 grow_vertical = 0
 scale = Vector2(0.4, 0.4)
@@ -273,10 +277,10 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -225.00012
-offset_top = 90.999985
-offset_right = 231.99988
-offset_bottom = 206.0
+offset_left = -396.50012
+offset_top = 277.0
+offset_right = 403.49988
+offset_bottom = 392.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
@@ -334,9 +338,9 @@ anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
 offset_left = -750.0
-offset_top = -400.0
+offset_top = -477.0
 offset_right = 750.0
-offset_bottom = 400.0
+offset_bottom = 323.0
 grow_horizontal = 2
 grow_vertical = 2
 texture = ExtResource("12_5lv44")
@@ -377,7 +381,7 @@ text = "
 This is a pattern-recognition battle.
 Learn the mechanic, recognise the tell, and plan your movement accordingly.
 
-If you need a helping hand, you can enable Battle Assist at any time from the pause menu."
+If you need a helping hand, you can read the guide by accessing the pause menu."
 horizontal_alignment = 1
 vertical_alignment = 1
 autowrap_mode = 2
@@ -390,9 +394,9 @@ anchor_top = 1.0
 anchor_right = 0.5
 anchor_bottom = 1.0
 offset_left = -188.77313
-offset_top = -203.0
+offset_top = -280.0
 offset_right = 188.7732
-offset_bottom = -77.0
+offset_bottom = -154.0
 grow_horizontal = 2
 grow_vertical = 0
 texture_normal = ExtResource("12_owqp5")
@@ -415,13 +419,184 @@ offset_right = 228.5
 offset_bottom = 62.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_colors/font_color = Color(0, 0.2784314, 0.34901962, 1)
+theme_override_colors/font_color = Color(0.30980393, 0.011764706, 0.050980393, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
 theme_override_constants/outline_size = 15
 theme_override_fonts/font = ExtResource("9_60ht8")
-theme_override_font_sizes/font_size = 80
+theme_override_font_sizes/font_size = 60
 text = "Confirm"
 horizontal_alignment = 1
 vertical_alignment = 1
+
+[node name="BossSpellName" type="Label" parent="." unique_id=1319144938]
+custom_minimum_size = Vector2(800, 0)
+custom_maximum_size = Vector2(800, -1)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -402.0
+offset_top = -1.0
+offset_right = 398.0
+offset_bottom = 114.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.13725491, 0.18039216, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_60ht8")
+theme_override_font_sizes/font_size = 40
+text = "Ravenous Midnight Chime"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BossCastBar" type="TextureProgressBar" parent="." unique_id=2016036708]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -651.4999
+offset_top = -1065.0
+offset_right = 646.5001
+offset_bottom = -899.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+value = 100.0
+texture_under = ExtResource("6_xhqch")
+texture_progress = ExtResource("9_ow4qa")
+texture_progress_offset = Vector2(8, 8)
+
+[node name="Label" type="Label" parent="BossCastBar" unique_id=1984866565]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -217.0
+offset_top = -51.0
+offset_right = 217.0
+offset_bottom = 51.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.13725491, 0.18039216, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_60ht8")
+theme_override_font_sizes/font_size = 80
+text = "Casting spell..."
+
+[node name="BossHPBar" type="TextureProgressBar" parent="." unique_id=38940740]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -1231.0
+offset_top = -145.80005
+offset_right = 67.00012
+offset_bottom = 20.199951
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(0.4, 0.4)
+pivot_offset_ratio = Vector2(0.5, 0.5)
+value = 100.0
+texture_under = ExtResource("6_xhqch")
+texture_progress = ExtResource("16_ldc1w")
+texture_progress_offset = Vector2(8, 8)
+
+[node name="BattleStart" type="Label" parent="." unique_id=353047640]
+custom_minimum_size = Vector2(800, 0)
+custom_maximum_size = Vector2(800, -1)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -400.0
+offset_top = -63.5
+offset_right = 400.0
+offset_bottom = 63.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(1, 1, 0, 1)
+theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.13725491, 0.18039216, 1)
+theme_override_constants/outline_size = 10
+theme_override_fonts/font = ExtResource("9_60ht8")
+theme_override_font_sizes/font_size = 100
+text = "Battle Start!"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="BossSpeech" type="TextureRect" parent="." unique_id=663902892]
+visible = false
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -288.0
+offset_top = -387.0
+offset_right = 288.0
+offset_bottom = -296.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("17_v6811")
+expand_mode = 1
+
+[node name="BossIcon" type="ColorRect" parent="BossSpeech" unique_id=504144591]
+clip_contents = true
+layout_mode = 0
+offset_right = 93.0
+offset_bottom = 93.0
+
+[node name="TextureRect" type="TextureRect" parent="BossSpeech/BossIcon" unique_id=1502669823]
+layout_mode = 0
+offset_left = -44.0
+offset_top = -4.0
+offset_right = 135.0
+offset_bottom = 175.0
+texture = ExtResource("18_duki4")
+expand_mode = 1
+
+[node name="BossIcon2" type="TextureRect" parent="BossSpeech/BossIcon" unique_id=1929305518]
+clip_contents = true
+layout_mode = 0
+offset_right = 93.0
+offset_bottom = 93.0
+texture = ExtResource("19_duki4")
+expand_mode = 1
+
+[node name="BossText" type="Label" parent="BossSpeech" unique_id=409713379]
+custom_minimum_size = Vector2(400, 0)
+custom_maximum_size = Vector2(425, -1)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 112.5
+offset_top = 14.0
+offset_right = -38.5
+offset_bottom = -15.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.009851543, 0.013160292, 0.051243737, 1)
+theme_override_colors/font_shadow_color = Color(0.5647059, 1, 1, 0)
+theme_override_colors/font_outline_color = Color(0.101960786, 0.13725491, 0.18039216, 1)
+theme_override_fonts/font = ExtResource("9_60ht8")
+theme_override_font_sizes/font_size = 20
+vertical_alignment = 1
+autowrap_mode = 2
 
 [connection signal="pressed" from="Tutorial/ProceedButton" to="." method="_on_proceed_button_pressed"]

@@ -11,7 +11,7 @@ func _ready() -> void:
 func update_skill(_skill_resource: SkillResource = null) -> void:
 	var index: int = slot_number - 1
 
-	if index < GameState.skills.size():
+	if index >= 0 and index < GameState.skills.size() and GameState.skills[index] != null:
 		icon.texture = GameState.skills[index].skill_icon
 	else:
 		icon.texture = null

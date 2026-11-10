@@ -7,6 +7,6 @@
 script = ExtResource("1_pljpj")
 skill_name = "Fleshrender"
 skill_icon = ExtResource("2_7lfip")
-skill_description = "Deal heavy damage to one target."
-skill_damage = 500.0
-skill_cooldown = 15.0
+skill_description = "Instantly deal 330 damage to your target in melee range."
+skill_damage = 330
+skill_cooldown = 15

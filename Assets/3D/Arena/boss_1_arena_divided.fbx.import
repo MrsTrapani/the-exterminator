@@ -41,15 +41,15 @@ materials/extract_format=0
 materials/extract_path=""
 _subresources={
 "materials": {
-"Material": {
+"Emissive": {
 "use_external/enabled": true,
-"use_external/fallback_path": "res://Material/M_Rocks.tres",
-"use_external/path": "uid://bb32h5nutnjdp"
-}
+"use_external/fallback_path": "res://Material/M_World_emissive.tres",
+"use_external/path": "uid://cdn4sov0jlfw0"
 },
-"nodes": {
-"PATH:Cylinder": {
-"generate/physics": true
+"World": {
+"use_external/enabled": true,
+"use_external/fallback_path": "res://Material/World_Brush.tres",
+"use_external/path": "uid://bej3j7ay62e4a"
 }
 }
 }

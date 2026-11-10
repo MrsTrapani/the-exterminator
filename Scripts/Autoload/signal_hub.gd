@@ -1,5 +1,7 @@
 extends Node
 
+signal boss_cast_started(cast_name: String, duration: float)
+
 signal upgrade_selected
 
 signal loadout_requested

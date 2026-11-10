@@ -17,6 +17,9 @@ func _ready() -> void:
 	selected.hide()
 	selector.hide()
 	icon.texture = skill_resource.skill_icon
+	is_selected = skill_resource in GameState.skills
+	selected.visible = is_selected
+	GameState.skill_selected = GameState.skills.size()
 	
 
 func _on_button_mouse_entered() -> void:

@@ -1,0 +1,151 @@
+[gd_scene format=3 uid="uid://ml8yo6qnr4ii"]
+
+[ext_resource type="FontFile" uid="uid://dw21cnk7vpkf" path="res://Assets/Font/BorderWall.otf" id="1_0w2yp"]
+[ext_resource type="Script" uid="uid://cuiljw3olhi58" path="res://Scripts/UI/boss_intro_ui.gd" id="1_4lk0r"]
+[ext_resource type="Texture2D" uid="uid://w2v1ci14e844" path="res://Assets/2D/Icons/Gameplay/decorative_circle.png" id="1_yo3ku"]
+
+[sub_resource type="Animation" id="Animation_oklsm"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpinningIcon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_4lk0r"]
+resource_name = "on_spawn"
+length = 4.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("SpinningIcon:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MapName:modulate")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0.75, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("BossName:modulate")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(1.5, 3.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oklsm"]
+_data = {
+&"RESET": SubResource("Animation_oklsm"),
+&"on_spawn": SubResource("Animation_4lk0r")
+}
+
+[node name="BossIntroUI" type="Control" unique_id=959201266]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_4lk0r")
+
+[node name="SpinningIcon" type="TextureRect" parent="." unique_id=2137274195]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -483.0
+offset_top = -483.0
+offset_right = 483.0
+offset_bottom = 483.0
+grow_horizontal = 2
+grow_vertical = 2
+pivot_offset_ratio = Vector2(0.5, 0.5)
+mouse_filter = 2
+texture = ExtResource("1_yo3ku")
+
+[node name="MapName" type="RichTextLabel" parent="." unique_id=1128371046]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1000, 500)
+custom_maximum_size = Vector2(-1, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -147.0
+offset_right = 500.0
+offset_bottom = 353.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -15
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/normal_font = ExtResource("1_0w2yp")
+theme_override_font_sizes/normal_font_size = 80
+text = "Clockwork Reverie
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="BossName" type="RichTextLabel" parent="." unique_id=198237672]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(1000, 500)
+custom_maximum_size = Vector2(-1, 500)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -74.0
+offset_right = 500.0
+offset_bottom = 426.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/line_separation = -15
+theme_override_constants/shadow_outline_size = 15
+theme_override_fonts/normal_font = ExtResource("1_0w2yp")
+theme_override_font_sizes/normal_font_size = 60
+text = "Chronos, The Timekeeper
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=1010637107]
+libraries/ = SubResource("AnimationLibrary_oklsm")

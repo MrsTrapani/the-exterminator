@@ -1,0 +1,168 @@
+[gd_scene format=3 uid="uid://qervnh5gbunp"]
+
+[ext_resource type="Script" path="res://Scripts/Mechanic/pizza_explosion.gd" id="1_w42mr"]
+[ext_resource type="Shader" uid="uid://de7cy2qqnf2p5" path="res://Externals/Binbun/BinbunVFX/impact_explosions/src/shader/explosion_core_particle.gdshader" id="2_odcpx"]
+[ext_resource type="Texture2D" uid="uid://85fb3gemkbhp" path="res://Externals/Binbun/BinbunVFX/shared/texture/cracks_01.png" id="3_ks4rf"]
+[ext_resource type="Texture2D" uid="uid://bbxo5nkvy537a" path="res://Externals/Binbun/BinbunVFX/shared/texture/cracks_emission_01.png" id="4_bem6i"]
+
+[sub_resource type="Gradient" id="Gradient_huy36"]
+
+[sub_resource type="FastNoiseLite" id="FastNoiseLite_yt6d1"]
+noise_type = 2
+frequency = 0.02
+fractal_octaves = 1
+domain_warp_enabled = true
+domain_warp_type = 2
+domain_warp_amplitude = 5.0
+domain_warp_fractal_octaves = 1
+
+[sub_resource type="NoiseTexture2D" id="NoiseTexture2D_jehp2"]
+noise = SubResource("FastNoiseLite_yt6d1")
+color_ramp = SubResource("Gradient_huy36")
+seamless = true
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_jehp2"]
+resource_local_to_scene = true
+render_priority = 0
+shader = ExtResource("2_odcpx")
+shader_parameter/noise_texture = SubResource("NoiseTexture2D_jehp2")
+shader_parameter/primary_color = Color(1, 0.529412, 0, 1)
+shader_parameter/texture_scale = Vector2(1, 1)
+shader_parameter/proximity_fade = false
+shader_parameter/proximity_fade_distance = 1.0
+shader_parameter/alpha_mode = 0
+
+[sub_resource type="Curve" id="Curve_gk7hu"]
+_data = [Vector2(0, 0), 0.0, 2.69302, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
+point_count = 2
+
+[sub_resource type="CurveTexture" id="CurveTexture_irlqe"]
+curve = SubResource("Curve_gk7hu")
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_vw7xv"]
+angle_min = -720.0
+angle_max = 799.5
+spread = 180.0
+flatness = 1.0
+gravity = Vector3(0, 0, 0)
+scale_min = 0.8
+alpha_curve = SubResource("CurveTexture_irlqe")
+
+[sub_resource type="TorusMesh" id="TorusMesh_g3mpo"]
+inner_radius = 13.0
+outer_radius = 28.0
+
+[sub_resource type="Animation" id="Animation_gk7hu"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Core:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Decal:emission_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [4.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Decal:albedo_mix")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [1.0]
+}
+
+[sub_resource type="Animation" id="Animation_tpmvn"]
+resource_name = "main"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Core:emitting")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Decal:emission_energy")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.5, 1),
+"update": 0,
+"values": [4.0, 0.0]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Decal:albedo_mix")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(0.4, 1),
+"update": 0,
+"values": [1.0, 0.0]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_6ypje"]
+_data = {
+&"RESET": SubResource("Animation_gk7hu"),
+&"main": SubResource("Animation_tpmvn")
+}
+
+[node name="VFXImpact_01" type="Node3D" unique_id=978543547]
+script = ExtResource("1_w42mr")
+autoplay = false
+primary_color = Color(1, 0.529412, 0, 1)
+secondary_color = Color(0.984314, 0.192157, 0, 1)
+tertiary_color = Color(0.227451, 0.223529, 0.180392, 1)
+light_color = Color(1, 0.529412, 0, 1)
+light_energy = 8.0
+
+[node name="Core" type="GPUParticles3D" parent="." unique_id=51240816]
+sorting_offset = 0.5
+material_override = SubResource("ShaderMaterial_jehp2")
+emitting = false
+amount = 1
+one_shot = true
+explosiveness = 0.8
+process_material = SubResource("ParticleProcessMaterial_vw7xv")
+draw_pass_1 = SubResource("TorusMesh_g3mpo")
+
+[node name="Decal" type="Decal" parent="." unique_id=108738931]
+size = Vector3(3, 3, 3)
+texture_albedo = ExtResource("3_ks4rf")
+texture_emission = ExtResource("4_bem6i")
+emission_energy = 4.0
+modulate = Color(1, 0.32549, 0, 1)
+cull_mask = 507903
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="." unique_id=430311311]
+libraries/ = SubResource("AnimationLibrary_6ypje")
+
